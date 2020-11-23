@@ -1,8 +1,36 @@
-<div class="chat-header">
-</div>
+<header class="navbar " role="navigation" aria-label="main navigation">
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start navbar-item">
+        <strong>room_name</strong>
+    </div>
+    <div class="navbar-item">
+      <strong>ルーム作成した時刻</strong>
+    </div>
+    <div class="navbar-end navbar-item">
+      <a class="button is-success is-outlined">
+        <strong>chat_end</strong>
+      </a>
+    </div>
+  </div>
+</header>
 
-<div class="messages">
-</div>
+<main class="mains">
+  <div class="main mt-4">
+    <%= render partial: 'message' %>
+  </div>
+</main>
 
-<div class="form">
-</div>
+<footer class="media mt-4">
+  <figure class="media-left">
+    <p class="image is-64x64">
+      <img src="https://www.newsweekjapan.jp/stories/assets_c/2017/04/iStock-501152239b-thumb-720xauto-110669.jpg">
+    </p>
+  </figure>
+  <input class="input is-medium" type="text" placeholder="Medium input">
+    <nav class="level">
+      <div class="level-right level-item ml-4">
+        <a class="button is-info is-medium">Submit</a>
+      </div>
+    </nav>
+  </div>
+</footer>

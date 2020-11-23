@@ -1,6 +1,15 @@
 // Place all the styles related to the messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.menu-list {
+.wrapper{
+  background-color: rgb(196, 160, 160);
+  height: 102vh;
+}
+.room{
   overflow: scroll;
+  height: 50%;
+}
+.mains {
+  overflow: scroll;
+  height: 80%;
 }
