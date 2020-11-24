@@ -4,12 +4,10 @@
   
 }
 .signup{
-  width:  30vw;
-  height: 20vh;
-   
+  width:  30%;
 }
+
 .fields{
   width:  50vw;
-  height: 30vh;
-  justify-content: space-between;
+  height: 43%;
 }
