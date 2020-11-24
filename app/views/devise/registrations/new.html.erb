@@ -13,50 +13,50 @@
         新規アカウントの作成 
       </p>
     </div>
-    <div class="fields box mt-5 ml-5">
-    <%= form_with model: resource, as: resource_name, url: registration_path(resource_name), local: true do |f|%>
-      <div class="field">
-        <%= f.label :name %>
-        <p class="control has-icons-left">
-          <%= f.text_field :name, autofocus: true, class: "input is-primary", type: "text", placeholder: "Name"%>
-          <span class="icon is-small is-left">
-            <i class="fas fa-check-square"></i>
-          </span>
-        </p>
+      <div class="fields box mt-5 ml-5">
+      <%= form_with model: resource, as: resource_name, url: registration_path(resource_name), local: true do |f|%>
+        <div class="field">
+          <%= f.label :name %>
+          <p class="control has-icons-left">
+            <%= f.text_field :name, autofocus: true, class: "input is-primary", type: "text", placeholder: "Name"%>
+            <span class="icon is-small is-left">
+              <i class="fas fa-check-square"></i>
+            </span>
+          </p>
+        </div>
+        <div class="field">
+          <%= f.label :email %>
+          <p class="control has-icons-left has-icons-right">
+            <%= f.email_field :email, class:"input is-primary", type:"email", placeholder:"Email"%>
+            <span class="icon is-small is-left">
+              <i class="fas fa-envelope"></i>
+            </span>
+            <span class="icon is-small is-right">
+              <i class="fas fa-check"></i>
+            </span>
+          </p>
+        </div>
+        <div class="field">
+          <%= f.label :password %>
+          <i>(英数字6文字以上)</i>
+          <p class="control has-icons-left">
+            <%= f.password_field :password, autocomplete: "off", class:"input is-primary", type:"password", placeholder:"Password"%>
+            <span class="icon is-small is-left">
+              <i class="fas fa-lock"></i>
+            </span>
+          </p>
+        </div>
+        <div class="field">
+          <%= f.label :password_confirmation %>
+          <p class="control has-icons-left">
+            <%= f.password_field :password_confirmation, autocomplete: "off", class:"input is-primary", type:"password", placeholder:"Password"%>
+            <span class="icon is-small is-left">
+              <i class="fas fa-lock"></i>
+            </span>
+          </p>
+        </div>
       </div>
-      <div class="field">
-        <%= f.label :email %>
-        <p class="control has-icons-left has-icons-right">
-          <%= f.email_field :email, class:"input is-primary", type:"email", placeholder:"Email"%>
-          <span class="icon is-small is-left">
-            <i class="fas fa-envelope"></i>
-          </span>
-          <span class="icon is-small is-right">
-            <i class="fas fa-check"></i>
-          </span>
-        </p>
-      </div>
-      <div class="field">
-        <%= f.label :password %>
-        <i>(英数字6文字以上)</i>
-        <p class="control has-icons-left">
-          <%= f.password_field :password, autocomplete: "off", class:"input is-primary", type:"password", placeholder:"Password"%>
-          <span class="icon is-small is-left">
-            <i class="fas fa-lock"></i>
-          </span>
-        </p>
-      </div>
-      <div class="field">
-        <%= f.label :password_confirmation %>
-        <p class="control has-icons-left">
-          <%= f.password_field :password_confirmation, autocomplete: "off", class:"input is-primary", type:"password", placeholder:"Password"%>
-          <span class="icon is-small is-left">
-            <i class="fas fa-lock"></i>
-          </span>
-        </p>
-      </div>
-    </div>
-    <%= f.submit "Create Account", class:"button is-info is-rounded ml-5"%>
+      <%= f.submit "Create Account", class:"button is-info is-rounded ml-5"%>
     <% end %>
   </div>
 </div>
