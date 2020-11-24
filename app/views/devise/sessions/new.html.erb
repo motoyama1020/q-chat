@@ -1,33 +1,40 @@
-<div class='account-page' id='account-page'>
-  <div class='account-page__inner clearfix'>
-    <div class='account-page__inner--left account-page__header'>
-      <h2>Log in</h2>
-      <h5>登録しているユーザーでログイン</h5>
-      <%= render "devise/shared/links"%>
+<div class="top">
+  <nav class="navbar is-primary" role="navigation" aria-label="dropdown navigation">
+      <div class="navbar-start navbar-item ">
+            <strong>Qchat</strong>
+      </div>
+    </nav>
+  <div class="signin">
+    <div class="box mt-5 ml-5">
+      <p class="title center">
+        Log in
+      </p>
+      <p class="subtitle">
+        登録しているユーザーでログイン 
+      </p>
     </div>
-    <div class='account-page__inner--right user-form'>
-      <%= form_with model: resource, as: resource_name, url: session_path(resource_name), local: true do |f|%>
-        <div class='field'>
-          <div class='field-label'>
-            <%= f.label :email%>
-          </div>
-          <div class='field-input'>
-            <%= f.email_field :email, autofocus: true%>
-          </div>
-          <div class='field'>
-            <div class='field-label'>
-              <%= f.label :password%>
-              <i>(英数字6文字以上)</i>
-            </div>
-            <div class='field-input'>
-              <%= f.password_field :password, autocomplete: "off"%>
-            </div>
-          </div>
-          <div class='actions'>
-            <%= f.submit "Log in", class: 'btn'%>
-          </div>
-        </div>
-      <% end %>
+    <div class="fields box mt-5 ml-5">
+      <div class="field">
+        <p class="control has-icons-left has-icons-right">
+          <input class="input is-primary" type="email" placeholder="Email">
+          <span class="icon is-small is-left">
+            <i class="fas fa-envelope"></i>
+          </span>
+          <span class="icon is-small is-right">
+            <i class="fas fa-check"></i>
+          </span>
+        </p>
+      </div>
+      <div class="field">
+      <div class="field">
+        <p class="control has-icons-left">
+          <input class="input is-primary" type="password" placeholder="Password">
+          <span class="icon is-small is-left">
+            <i class="fas fa-lock"></i>
+          </span>
+        </p>
+      </div>
+      <button class="button is-info is-rounded mt-5">登録</button>
     </div>
   </div>
 </div>
