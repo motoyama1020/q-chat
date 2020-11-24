@@ -1,11 +1,7 @@
 <%# ボタン %>
 <div class="user box ml-5 mt-4">
-  <div class="button is-link is-rounded is-light ml-5">
-    <a href="#">userでログイン中</a>
-  </div>
-  <div class="button is-link is-rounded is-light mt-3 ml-5 ">
-    <a href="#">room-create</a>
-  </div>
+  <%= link_to "#{current_user.name}のマイページ", edit_user_path(current_user), class:'button is-success is-outlined'%>
+  <%= link_to "チャットを作成する", "#", class:'button is-link is-focused mt-3' %>
 </div>
 <%# ボタン %>
 
