@@ -15,6 +15,7 @@
     </div>
       <div class="fields box mt-5 ml-5">
       <%= form_with model: resource, as: resource_name, url: registration_path(resource_name), local: true do |f|%>
+        <%= devise_error_messages!%>
         <div class="field">
           <%= f.label :name %>
           <p class="control has-icons-left">
