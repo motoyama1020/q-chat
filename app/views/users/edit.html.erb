@@ -5,7 +5,7 @@
       </div>
     </nav>
   <div class="edit">
-    <div class="box mt-5 ml-5">
+    <div class="box">
       <p class="title center">
         Edit Account
       </p>
@@ -15,7 +15,7 @@
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'button is-success is-outlined'%>
       <%= link_to "チャットページに戻る", :back, class: 'button is-success is-light'%>
     </div>
-    <div class="ff box mt-5 ml-5">
+    <div class="box">
       <%= form_with model: current_user, local: true do |f|%>
       <div class="field">
         <%= f.label :name%>
@@ -38,7 +38,7 @@
           </span>
         </p>
       </div>
-      <%= f.submit "Edit", class:"button is-info is-rounded mt-5"%>
+      <%= f.submit "Edit", class:"button is-info is-rounded"%>
       <% end %>
     </div>
   </div>
