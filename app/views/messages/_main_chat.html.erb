@@ -1,27 +1,19 @@
-<header class="navbar is-warning " role="navigation" aria-label="main navigation">
-  <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-start navbar-item">
-        <strong>room_name</strong>
-    </div>
-    <div class="navbar-item">
-      <strong>何月何日の謎解き</strong>
-    </div>
-    <div class="navbar-end navbar-item">
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'button is-dark is-outlined mr-3'%>
-      <a class="button is-dark is-outlined">
-        <strong>chat_end</strong>
-      </a>
+<div class="main-header">
+  <div class="header-title">
+    <div class="left-header">
+      <%= @room.name %>
     </div>
   </div>
-</header>
-
-
+  <div class="header-buttton">
+    <div class="right-header">
+      <%= link_to "チャットを終了する", "#", method: :delete %>
+    </div>
+  </div>
+</div>
 
 <div class="messages">
   <%= render partial: 'message', collection: @messages %>
 </div>
-
-
 
 <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
   <div class="form-input">
