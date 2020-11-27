@@ -1,7 +1,8 @@
-<div class="top">
-  <nav class="navbar is-primary" role="navigation" aria-label="dropdown navigation">
+<div class="columns is-mobile pt-6">
+  <div class="column is-three-fifths is-offset-one-fifth">
+    <nav class="navbar is-primary" role="navigation" aria-label="dropdown navigation">
       <div class="navbar-start navbar-item ">
-            <strong>Qchat</strong>
+            <a herf="root_path"><strong class="button is-primary">Qchat</strong></a>
       </div>
     </nav>
   <div class="edit">
@@ -12,7 +13,7 @@
       <p class="subtitle">
         アカウントの編集
       </p>
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'button is-success is-outlined'%>
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'button is-success is-focused'%>
       <%= link_to "チャットページに戻る", :back, class: 'button is-success is-light'%>
     </div>
     <div class="box">
