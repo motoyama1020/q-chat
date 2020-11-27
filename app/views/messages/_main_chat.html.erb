@@ -21,21 +21,14 @@
   </div>
 </main>
 
-<footer class="media mt-4">
-  <figure class="media-left">
-    <p class="image is-64x64">
-      <img src="https://www.newsweekjapan.jp/stories/assets_c/2017/04/iStock-501152239b-thumb-720xauto-110669.jpg">
-    </p>
-  </figure>
-  <input class="input is-medium" type="text" placeholder="Medium input">
-  <label class="form-image">
+
+<%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
+  <div class="form-input">
+    <%= f.text_field :content, class: 'form-message', placeholder: 'type a message' %>
+    <label class="form-image">
       <span class="image-file">画像</span>
-      <input type="file" class="hidden">
+      <%= f.file_field :image, class: 'hidden' %>
     </label>
-    <nav class="level">
-      <div class="level-right level-item">
-        <a class="button is-info is-medium">Submit</a>
-      </div>
-    </nav>
   </div>
-</footer>
+  <%= f.submit '送信', class: 'form-submit' %>
+<% end %>
