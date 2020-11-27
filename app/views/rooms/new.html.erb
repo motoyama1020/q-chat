@@ -2,7 +2,7 @@
   <div class="column is-three-fifths is-offset-one-fifth">
     <nav class="navbar is-primary" role="navigation" aria-label="dropdown navigation">
       <div class="navbar-start navbar-item">
-            <a herf="root_path"><strong class="button is-primary">Qchat</strong></a>
+        <%= link_to "Qchat", root_path, class:"button is-primary"%> 
       </div>
     </nav>
     <div class="create-room">
@@ -13,6 +13,7 @@
         <p class="subtitle">
           新規チャットルーム作成
         </p>
+        <%= link_to "チャットページに戻る", :back, class: 'button is-success is-light'%>
       </div>
       <div class='chat-room-form box'>
         <%=form_with model: @room, local: true do |f|%>
@@ -24,19 +25,23 @@
               <%= f.text_field :name, class: 'chat__room_name chat-room-form__input is-focused input is-info is-medium', placeholder: 'チャットルーム名を入力してください'%>
             </div>
           </div>
-          <div class='chat-room-form__field'>
+          <div class='chat-room-form__field mt-4'>
             <div class='chat-room-form__field--left'>
               <label class='chat-room-form__label' for='chat_room_チャットメンバー'>チャットメンバー</label>
             </div>
             <%# プルダウン %>
-            <div class='chat-room-form__field--right'>
-              <select name="room[user_ids][]">
-                <option value="">チャットするユーザーを選択してください</option>
-              <% User.where.not(id: current_user.id).each do |user| %>
-                <option value=<%= user.id %>><%= user.name %></option>
-              <% end %>
-              </select>
-              <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
+            <div class="field">
+              <div class="control">
+                <div class="select is-info">
+                  <select name="room[user_ids][]">
+                    <option value="">チャットするユーザーを選択してください</option>
+                    <% User.where.not(id: current_user.id).each do |user| %>
+                      <option value=<%= user.id %>><%= user.name %></option>
+                    <% end %>
+                  </select>
+                  <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
+                </div>
+              </div>
             </div>
             <%# プルダウン %>
           </div>

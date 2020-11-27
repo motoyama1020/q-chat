@@ -1,4 +1,4 @@
-<div class="column is-one-quarter">
+<div class="column pl-5">
   <%# ボタン %>
   <div class="user box">
     <%= link_to "#{current_user.name}のマイページ", edit_user_path(current_user), class:'button is-primary is-focused m-2'%>
@@ -10,7 +10,7 @@
   <%# ルーム名 %> 
   <article class="panel is-primary">
     <p class="panel-heading">
-      room_name
+      チャットルーム一覧
     </p>
     <p class="panel-tabs">
       <a class="is-active">All</a>
@@ -27,7 +27,7 @@
         </span>
       </p>
     </div>
-    <div class="rooms">
+    <div class="rooms ">
       <% current_user.rooms.each do |room| %>
         <div class="panel-block">
           <span class="panel-icon">

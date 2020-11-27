@@ -2,7 +2,7 @@
   <div class="column is-three-fifths is-offset-one-fifth">
     <nav class="navbar is-primary" role="navigation" aria-label="dropdown navigation">
       <div class="navbar-start navbar-item">
-            <a herf="root_path"><strong class="button is-primary">Qchat</strong></a>
+        <%= link_to "Qchat", root_path, class:"button is-primary"%> 
       </div>
     </nav>
     <div class="signin">
@@ -38,7 +38,7 @@
             </span>
           </p>
         </div>
-        <%= f.submit "Log In", class:"button is-info is-rounded "%>
+        <%= f.submit "ログイン", class:"button is-info is-rounded "%>
       <% end %>
     </div>
   </div>
