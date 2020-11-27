@@ -15,11 +15,12 @@
   </div>
 </header>
 
-<main class="mains">
-  <div class="main mt-4">
-    <%= render partial: 'message' %>
-  </div>
-</main>
+
+
+<div class="messages">
+  <%= render partial: 'message', collection: @messages %>
+</div>
+
 
 
 <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>

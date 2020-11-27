@@ -1,81 +1,18 @@
-<article class="box media">
-   <figure class="media-left">
-      <p class="image is-64x64">
-         <img src="https://tk.ismcdn.jp/mwimgs/e/b/1140/img_eb31afc9c1fb914d68a7c73b657c7ebe183087.jpg">
-      </p>
-   </figure>
-   <div class="media-content">
-      <div class="content">
-         <p><strong>user-name1</strong><br>
-            内容、内容、内容、内容、内容、内容、内容、内容、内容、内容、内容、内容、内容<br>
-            <small><a>Like</a> · <a>Reply</a> · 3 hrs</small>
-          </p>
-      </div>
-      <article class="media">
-          <figure class="media-left">
-             <p class="image is-48x48">
-                <img src="https://stat.ameba.jp/user_images/20170802/18/suzume-0513/96/d5/j/o0480048013996220706.jpg?caw=800">
-             </p>
-          </figure>
-          <div class="media-content">
-             <div class="content">
-               <p><strong>user_name2</strong><br>
-                  コメントコメントコメントコメントコメントコメントコメントコメントコメントコメント<br>
-                  <small>time</small>
-               </p>
-             </div>
-             <article class="media">
-                リプライリプライリプライリプライリプライリプライリプライリプライリプライリプライ。
-             </article>
-             <article class="media">
-                リプライリプライリプライリプライリプライリプライリプライリプライリプライリプライ。
-             </article>
-          </div>
-      </article>
-   </div>
-</article>
-<article class="box media">
-   <figure class="media-left">
-      <p class="image is-48x48">
-         <img src="https://www.newsweekjapan.jp/stories/assets_c/2017/04/iStock-501152239b-thumb-720xauto-110669.jpg">
-      </p>
-   </figure>
-   <div class="media-content">
-      <div class="content">
-         <p><strong>user_name3</strong><br>
-           内容、内容、内容、内容、内容、内容、内容、内容、内容、内容、内容、内容、内容、内容<br>
-           <small>time</small>
-         </p>
-      </div>
-   </div>
-</article>
-<article class="box media">
-   <figure class="media-left">
-      <p class="image is-48x48">
-         <img src="https://img.huffingtonpost.com/asset/5f3caa10230000b70652270d.jpeg?cache=SuZrhScF6p&ops=crop_271_458_4183_1884%2Cscalefit_720_noupscale">
-      </p>
-   </figure>
-   <div class="media-content">
-      <div class="content">
-         <p><strong>user_name4</strong><br>
-           内容、内容、内容、内容、内容、内容、内容、内容、内容、内容、内容、内容、内容、内容<br>
-           <small>time</small>
-         </p>
-      </div>
-   </div>
-</article>
-<article class="box media">
-   <figure class="media-left">
-      <p class="image is-48x48">
-         <img src="https://img.huffingtonpost.com/asset/5f3caa10230000b70652270d.jpeg?cache=SuZrhScF6p&ops=crop_271_458_4183_1884%2Cscalefit_720_noupscale">
-      </p>
-   </figure>
-   <div class="media-content">
-      <div class="content">
-         <p><strong>user_name4</strong><br>
-           内容、内容、内容、内容、内容、内容、内容、内容、内容、内容、内容、内容、内容、内容<br>
-           <small>time</small>
-         </p>
-      </div>
-   </div>
-</article>
+<div class="message">
+  <div class="upper-message">
+    <div class="message-user">
+      <!-- 投稿したユーザー名情報を出力する -->
+      <%= message.user.name %>
+    </div>
+    <div class="message-date">
+      <!-- 投稿した時刻を出力する -->
+      <%= message.created_at %>
+    </div>
+  </div>
+  <div class="lower-message">
+    <div class="message-content">
+      <!-- 投稿したメッセージ内容を記述する -->
+      <%= message.content %>
+    </div>
+  </div>
+</div>
