@@ -3,6 +3,14 @@
   height: 100vh;
   padding: 60px;
 }
+.side-bar{
+  width: 20vw;
+  height: 110vh;
+}
+.wrapper{
+  background-color: rgb(196, 160, 160);
+  margin: auto;
+}
 h1 {
   letter-spacing: 2px;
   font-size: 24px;
