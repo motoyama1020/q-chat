@@ -66,7 +66,7 @@
 - faker
 
 ## ER図
-https://gyazo.com/f553d9ef9b507f3b3f8fbbba25067716
+![スクリーンショット ]https://gyazo.com/f553d9ef9b507f3b3f8fbbba25067716
 
 # テーブル設計
 
