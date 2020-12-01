@@ -16,7 +16,7 @@
       </div>
       <div class="fields box">
         <%= form_with model: resource, as: resource_name, url: registration_path(resource_name), local: true do |f|%>
-          <%= devise_error_messages!%>
+          <%= render 'shared/error_messages', model: f.object %>
           <div class="field">
             <%= f.label :name %>
             <p class="control has-icons-left">

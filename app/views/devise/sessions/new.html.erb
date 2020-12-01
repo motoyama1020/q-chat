@@ -17,6 +17,7 @@
       </div>
       <div class="box">
       <%= form_with model: resource, as: resource_name, url: session_path(resource_name), local: true do |f|%>
+        <%= render 'shared/error_messages', model: f.object %>
         <div class="field">
           <%= f.label :email%>
           <p class="control has-icons-left has-icons-right">

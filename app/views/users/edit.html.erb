@@ -18,6 +18,7 @@
     </div>
     <div class="box">
       <%= form_with model: current_user, local: true do |f|%>
+      <%= render 'shared/error_messages', model: f.object %>
       <div class="field">
         <%= f.label :name%>
         <p class="control has-icons-left has-icons-right">
