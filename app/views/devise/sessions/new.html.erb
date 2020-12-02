@@ -15,9 +15,9 @@
         </p>
         <%= link_to "新規アカウント登録", new_user_registration_path, class:'button is-link is-focused ' %>
       </div>
-      <div class="box">
+      <div class="fields box">
       <%= form_with model: resource, as: resource_name, url: session_path(resource_name), local: true do |f|%>
-      <%= render 'shared/error_messages', model: f.object %>
+        <%= render 'shared/error_messages', model: f.object %>
         <div class="field">
           <%= f.label :email%>
           <p class="control has-icons-left has-icons-right">

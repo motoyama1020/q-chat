@@ -1,0 +1,19 @@
+<div class="panel-block">
+  <%= form_with(url: search_rooms_path, local: true, method: :get, class: "control has-icons-left") do |form| %>
+    <%= form.text_field :keyword, placeholder: "部屋を検索する", class: "input is-primary" %>
+    <span class="icon is-left">
+      <i class="fas fa-search" aria-hidden="true"></i>
+    </span>
+    <%= form.submit "検索", class: "button is-info is-rounded mt-3 ml-3" %>
+  <% end %>
+</div>
+<div class="rooms is-block">
+  <% @rooms.each do |room| %>
+    <div class="panel-block">
+      <span class="panel-icon">
+        <i class="fas fa-book" aria-hidden="true"></i>
+      </span>
+      <%= link_to room.name, room_messages_path(room) %>
+    </div>
+  <% end %>
+</div>

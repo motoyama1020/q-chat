@@ -21,6 +21,10 @@ class RoomsController < ApplicationController
     room.destroy
     redirect_to root_path
   end
+  
+  def search
+    @rooms = Room.search(params[:keyword])
+  end
 
   private
 
