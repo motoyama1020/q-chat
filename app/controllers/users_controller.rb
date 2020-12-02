@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def edit
+    @message = Message.new
   end
 
   def update
