@@ -24,7 +24,7 @@
 
   <%= form_with model: [@room, @message], local: true do |f| %>
     <%= render 'shared/error_messages', model: f.object %>
-    <div class="is-flex ">
+    <div class="is-flex mt-3">
       <%= f.text_field :content, class: 'input is-primary is-rounded pr-6', type:"text", placeholder: 'type a message' %>
       <%= f.submit '送信', class:" button is-info is-rounded is-inline ml-1"%>
       <%= f.file_field :image, class: 'has-text-danger mt-1 ml-1'%>

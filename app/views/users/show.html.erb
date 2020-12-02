@@ -26,15 +26,27 @@
             </tr>
             <tr>
               <th class="detail-item">イベント参加回数</th>
+              <% if @user.event_time = NULL %>
               <td class="detail-value"><%= "#{@user.event_time}回" %></td>
+              <% else %>
+              <td class="detail-value"><%= "?回" %></td>
+              <% end %>
             </tr>
             <tr>
               <th class="detail-item">脱出成功回数</th>
+              <% unless @user.clear_time = NULL %>
               <td class="detail-value"><%= "#{@user.clear_time}回" %></td>
+              <% else %>
+              <td class="detail-value"><%= "?回" %></td>
+              <% end %>
             </tr>
             <tr>
               <th class="detail-item">成功率</th>
+              <% unless @user.clear_time = NULL || @user.event_time = NULL%>
               <td class="detail-value"><%= "#{@user.clear_time*100 / @user.event_time}%" %></td>
+              <% else %>
+              <td class="detail-value"><%= "?%" %></td>
+              <% end %>
             </tr>
           </tbody>
         </table>
