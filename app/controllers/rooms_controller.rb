@@ -1,9 +1,11 @@
 class RoomsController < ApplicationController
   def index
+    @rooms = Room.all.order(updated_at: :desc)
   end
 
   def new
     @room = Room.new
+    @room.users << current_user
   end
 
   def create
