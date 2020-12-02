@@ -2,7 +2,7 @@
   display: contents;
 }
 .rooms{
-  height: 20vh;
+  height: 30vh;
   overflow: scroll;
 }
 .messages{
