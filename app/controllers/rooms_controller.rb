@@ -1,4 +1,6 @@
 class RoomsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :search]
+
   def index
     @rooms = Room.all.order(created_at: :desc)
   end
@@ -24,7 +26,7 @@ class RoomsController < ApplicationController
   end
   
   def search
-    @rooms = Room.search(params[:keyword])
+    @rooms = Room.search(params[:keyword]).order(created_at: :desc)
   end
 
   private

@@ -1,7 +1,13 @@
 <div class="user box">
-  <%= link_to "#{current_user.name}のマイページ", user_path(current_user), class:'button is-primary is-focused m-2'%>
+  <% if user_signed_in? %>
+    <%= link_to "#{current_user.name}のマイページ", user_path(current_user), class:'button is-primary is-focused m-2'%>
+  <% else%>
+    <%= link_to "ログイン", new_user_session_path, class:'button is-primary is-focused m-2' %>
+  <% end %>
   <%= link_to "チャットを作成する", new_room_path, class:'button is-link is-focused m-2' %>
-  <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'button is-success is-focused m-2'%>
+  <% if user_signed_in? %>
+    <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'button is-success is-focused m-2'%>
+  <% end %>
 </div>
 <article class="panel is-primary">
   <p class="panel-heading">

@@ -1,8 +1,10 @@
 class MessagesController < ApplicationController
+  before_action :authenticate_user!
+  
   def index
     @message = Message.new
     @room = Room.find(params[:room_id])
-    @rooms = Room.all
+    @rooms = Room.all.order(created_at: :desc)
     @messages = @room.messages.includes(:user)
   end
 
