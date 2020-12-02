@@ -10,7 +10,7 @@
           アカウントの編集
         </p>
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'button is-success is-focused'%>
-        <%= link_to "チャットページに戻る", :back, class: 'button is-success is-light'%>
+        <%= link_to "マイページに戻る", user_path(current_user), class: 'button is-success is-light'%>
       </div>
       <div class="box">
         <%= form_with model: current_user, local: true do |f|%>

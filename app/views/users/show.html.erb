@@ -1,0 +1,44 @@
+<div class="columns is-mobile pt-4">
+  <div class="column is-three-fifths is-offset-one-fifth">
+    <%= render "shared/header" %>
+    <div class="show">
+      <div class="box">
+        <p class="title center">
+          My Page
+        </p>
+        <p class="subtitle">
+          マイページ
+        </p>
+        <%= link_to "ユーザー情報編集", edit_user_path(current_user), class:'button is-link is-focused'%>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'button is-success is-focused ml-2'%>
+        <%= link_to "ルーム一覧に戻る", rooms_path(current_user), class: 'button is-success is-light ml-2'%>
+      </div>
+      <div class="box">
+        <table class="table ml-6">
+          <tbody>
+            <tr>
+              <th class="detail-item">名前</th>
+              <td class="detail-value"><%= @user.name %></td>
+            </tr>
+            <tr>
+              <th class="detail-item">メール</th>
+              <td class="detail-value"><%= @user.email %></td>
+            </tr>
+            <tr>
+              <th class="detail-item">イベント参加回数</th>
+              <td class="detail-value"><%= "#{@user.event_time}回" %></td>
+            </tr>
+            <tr>
+              <th class="detail-item">脱出成功回数</th>
+              <td class="detail-value"><%= "#{@user.clear_time}回" %></td>
+            </tr>
+            <tr>
+              <th class="detail-item">成功率</th>
+              <td class="detail-value"><%= "#{@user.clear_time*100 / @user.event_time}%" %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
