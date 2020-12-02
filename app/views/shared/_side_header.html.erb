@@ -1,0 +1,27 @@
+<div class="user box">
+  <%= link_to "#{current_user.name}のマイページ", edit_user_path(current_user), class:'button is-primary is-focused m-2'%>
+  <%= link_to "チャットを作成する", new_room_path, class:'button is-link is-focused m-2' %>
+  <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'button is-success is-focused m-2'%>
+</div>
+
+<article class="panel is-primary">
+  <p class="panel-heading">
+    チャットルーム一覧
+  </p>
+  <p class="panel-tabs"> 
+    <a class="is-active">All</a>
+    <a>東京</a>
+    <a>神奈川</a>
+    <a>大阪</a>
+    <a>愛知</a>
+  </p>
+  <div class="panel-block">
+    <%= form_with(url: search_rooms_path, local: true, method: :get, class: "control has-icons-left") do |form| %>
+      <%= form.text_field :keyword, placeholder: "部屋を検索する", class: "input is-primary" %>
+      <span class="icon is-left">
+        <i class="fas fa-search" aria-hidden="true"></i>
+      </span>
+      <%= form.submit "検索", class: "button is-info is-rounded mt-3 ml-3" %>
+    <% end %>
+  </div>
+</article>
