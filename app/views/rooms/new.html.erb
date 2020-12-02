@@ -1,10 +1,6 @@
 <div class="columns is-mobile pt-3">
   <div class="column is-three-fifths is-offset-one-fifth">
-    <nav class="navbar is-primary" role="navigation" aria-label="dropdown navigation">
-      <div class="navbar-start navbar-item">
-        <%= link_to "Qchat", root_path, class:"button is-primary"%> 
-      </div>
-    </nav>
+    <%= render "shared/header" %>
     <div class="create-room">
       <div class="box">
         <p class="title center">
@@ -27,24 +23,24 @@
             </div>
           </div>
           <div class="is-flex mt-4">
-            <div class="weight-bold-text">
+            <div class="is-justify-content-space-between">
               期間(西暦)
               <span class="has-text-danger">必須</span>
               <%= f.collection_select(:year_id, Year.all, :id, :name, {}, {class:"button is-rounded"}) %>
             </div>
-            <div class="weight-bold-text">
+            <div class="is-justify-content-space-between">
               期間(月)
               <span class="has-text-danger">必須</span>
               <%= f.collection_select(:month_id, Month.all, :id, :name, {}, {class:"button is-rounded"}) %>
             </div>
-            <div class="weight-bold-text">
+            <div class="is-justify-content-space-between">
               都道府県
               <span class="has-text-danger">必須</span>
               <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"button is-rounded"}) %>
             </div>
-            <div class="weight-bold-text">
+            <div class="is-justify-content-space-between">
               定員
-              <span class="has-text-danger">必須</span>
+              <span class="is-justify-content-space-between">必須</span>
               <%= f.collection_select(:capacity_id, Capacity.all, :id, :name, {}, {class:"button is-rounded"}) %>
             </div>
           </div>

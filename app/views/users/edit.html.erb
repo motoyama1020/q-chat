@@ -1,47 +1,44 @@
 <div class="columns is-mobile pt-6">
   <div class="column is-three-fifths is-offset-one-fifth">
-    <nav class="navbar is-primary" role="navigation" aria-label="dropdown navigation">
-      <div class="navbar-start navbar-item ">
-        <%= link_to "Qchat", root_path, class:"button is-primary"%> 
-      </div>
-    </nav>
-  <div class="edit">
-    <div class="box">
-      <p class="title center">
-        Edit Account
-      </p>
-      <p class="subtitle">
-        アカウントの編集
-      </p>
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'button is-success is-focused'%>
-      <%= link_to "チャットページに戻る", :back, class: 'button is-success is-light'%>
-    </div>
-    <div class="box">
-      <%= form_with model: current_user, local: true do |f|%>
-      <%= render 'shared/error_messages', model: f.object %>
-      <div class="field">
-        <%= f.label :name%>
-        <p class="control has-icons-left has-icons-right">
-          <%= f.text_field :name, autofocus: true, class:"input is-primary", type:"name", placeholder:"Name"%>
-          <span class="icon is-small is-left">
-            <i class="fas fa-envelope"></i>
-          </span>
+    <%= render "shared/header" %>
+    <div class="edit">
+      <div class="box">
+        <p class="title center">
+          Edit Account
         </p>
-      </div>
-      <div class="field">
-        <%= f.label :email%>
-        <p class="control has-icons-left has-icons-right">
-          <%= f.email_field :email, autofocus: true, class:"input is-primary", type:"email", placeholder:"Email"%>
-          <span class="icon is-small is-left">
-            <i class="fas fa-envelope"></i>
-          </span>
-          <span class="icon is-small is-right">
-            <i class="fas fa-check"></i>
-          </span>
+        <p class="subtitle">
+          アカウントの編集
         </p>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'button is-success is-focused'%>
+        <%= link_to "チャットページに戻る", :back, class: 'button is-success is-light'%>
       </div>
-      <%= f.submit "編集する", class:"button is-info is-rounded"%>
-      <% end %>
+      <div class="box">
+        <%= form_with model: current_user, local: true do |f|%>
+        <%= render 'shared/error_messages', model: f.object %>
+        <div class="field">
+          <%= f.label :name%>
+          <p class="control has-icons-left has-icons-right">
+            <%= f.text_field :name, autofocus: true, class:"input is-primary", type:"name", placeholder:"Name"%>
+            <span class="icon is-small is-left">
+              <i class="fas fa-envelope"></i>
+            </span>
+          </p>
+        </div>
+        <div class="field">
+          <%= f.label :email%>
+          <p class="control has-icons-left has-icons-right">
+            <%= f.email_field :email, autofocus: true, class:"input is-primary", type:"email", placeholder:"Email"%>
+            <span class="icon is-small is-left">
+              <i class="fas fa-envelope"></i>
+            </span>
+            <span class="icon is-small is-right">
+              <i class="fas fa-check"></i>
+            </span>
+          </p>
+        </div>
+        <%= f.submit "編集する", class:"button is-info is-rounded"%>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
