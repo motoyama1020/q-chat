@@ -22,6 +22,7 @@
               <%= f.text_field :name, class: 'chat__room_name chat-room-form__input is-focused input is-info is-medium', placeholder: 'チャットルーム名を入力してください'%>
             </div>
           </div>
+          <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
           <div class="is-flex is-justify-content-space-between mt-4">
             <div class="is-justify-content-space-between">
               期間(西暦)
@@ -40,7 +41,7 @@
             </div>
             <div class="weight-bold-text">
               定員
-              <span class="is-justify-content-space-between">必須</span>
+              <span class="has-text-danger">必須</span>
               <%= f.collection_select(:capacity_id, Capacity.all, :id, :name, {}, {class:"button is-rounded"}) %>
             </div>
           </div>
