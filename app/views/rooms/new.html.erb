@@ -1,4 +1,4 @@
-<div class="columns is-mobile pt-6">
+<div class="columns is-mobile pt-3">
   <div class="column is-three-fifths is-offset-one-fifth">
     <nav class="navbar is-primary" role="navigation" aria-label="dropdown navigation">
       <div class="navbar-start navbar-item">
@@ -22,11 +22,33 @@
             <div class='chat-room-form__field--left'>
               <%= f.label :チャットルーム名, class: 'chat-room-form__label'%>
             </div>
-            <div class='chat-room-form__field--right'>
+            <div class='chat-room-form__field--right mt-2'>
               <%= f.text_field :name, class: 'chat__room_name chat-room-form__input is-focused input is-info is-medium', placeholder: 'チャットルーム名を入力してください'%>
             </div>
           </div>
-          <%= f.submit class: 'chat-room-form__action-btn button is-link is-focused mt-3'%>
+          <div class="is-flex mt-4">
+            <div class="weight-bold-text">
+              期間(西暦)
+              <span class="has-text-danger">必須</span>
+              <%= f.collection_select(:year_id, Year.all, :id, :name, {}, {class:"button is-rounded"}) %>
+            </div>
+            <div class="weight-bold-text">
+              期間(月)
+              <span class="has-text-danger">必須</span>
+              <%= f.collection_select(:month_id, Month.all, :id, :name, {}, {class:"button is-rounded"}) %>
+            </div>
+            <div class="weight-bold-text">
+              都道府県
+              <span class="has-text-danger">必須</span>
+              <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"button is-rounded"}) %>
+            </div>
+            <div class="weight-bold-text">
+              定員
+              <span class="has-text-danger">必須</span>
+              <%= f.collection_select(:capacity_id, Capacity.all, :id, :name, {}, {class:"button is-rounded"}) %>
+            </div>
+          </div>
+          <%= f.submit class: 'chat-room-form__action-btn button is-link is-focused mt-4'%>
         <% end %>
       </div>
     </div>
