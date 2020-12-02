@@ -22,12 +22,13 @@
   <%= render partial: 'message', collection: @messages %>
   </div>
 
- 
   <%= form_with model: [@room, @message], local: true do |f| %>
     <%= render 'shared/error_messages', model: f.object %>
-    <%= f.text_field :content, class: 'input is-primary is-rounded mt-2', type:"text", placeholder: 'type a message' %>
-    <%= f.submit '送信', class:" button is-info is-rounded is-inline mt-2 "%>
-    <%= f.file_field :image, class: 'has-text-danger mt-4 ml-3'%>
+    <div class="is-flex ">
+      <%= f.text_field :content, class: 'input is-primary is-rounded pr-6', type:"text", placeholder: 'type a message' %>
+      <%= f.submit '送信', class:" button is-info is-rounded is-inline ml-1"%>
+      <%= f.file_field :image, class: 'has-text-danger mt-1 ml-1'%>
+    </div>
   <% end %>
 </div>
 

@@ -22,23 +22,23 @@
               <%= f.text_field :name, class: 'chat__room_name chat-room-form__input is-focused input is-info is-medium', placeholder: 'チャットルーム名を入力してください'%>
             </div>
           </div>
-          <div class="is-flex mt-4">
+          <div class="is-flex is-justify-content-space-between mt-4">
             <div class="is-justify-content-space-between">
               期間(西暦)
               <span class="has-text-danger">必須</span>
               <%= f.collection_select(:year_id, Year.all, :id, :name, {}, {class:"button is-rounded"}) %>
             </div>
-            <div class="is-justify-content-space-between">
+            <div class="weight-bold-text">
               期間(月)
               <span class="has-text-danger">必須</span>
               <%= f.collection_select(:month_id, Month.all, :id, :name, {}, {class:"button is-rounded"}) %>
             </div>
-            <div class="is-justify-content-space-between">
+            <div class="weight-bold-text">
               都道府県
               <span class="has-text-danger">必須</span>
               <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"button is-rounded"}) %>
             </div>
-            <div class="is-justify-content-space-between">
+            <div class="weight-bold-text">
               定員
               <span class="is-justify-content-space-between">必須</span>
               <%= f.collection_select(:capacity_id, Capacity.all, :id, :name, {}, {class:"button is-rounded"}) %>

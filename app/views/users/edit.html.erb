@@ -1,4 +1,4 @@
-<div class="columns is-mobile pt-6">
+<div class="columns is-mobile pt-4">
   <div class="column is-three-fifths is-offset-one-fifth">
     <%= render "shared/header" %>
     <div class="edit">
@@ -20,7 +20,7 @@
           <p class="control has-icons-left has-icons-right">
             <%= f.text_field :name, autofocus: true, class:"input is-primary", type:"name", placeholder:"Name"%>
             <span class="icon is-small is-left">
-              <i class="fas fa-envelope"></i>
+              <i class="fas fa-check-square"></i>
             </span>
           </p>
         </div>
@@ -35,6 +35,26 @@
               <i class="fas fa-check"></i>
             </span>
           </p>
+        </div>
+        <div class="is-flex is-justify-content-left">
+          <div class="field ">
+            <%= f.label :イベント参加回数 %>
+            <p class="control has-icons-left has-icons-right">
+              <%= f.text_field :event_time, autofocus: true, class:"input is-primary", type:"name", placeholder:"例：10"%>
+              <span class="icon is-small is-left">
+                <i class="fas fa-check-square"></i>
+              </span>
+            </p>
+          </div>
+          <div class="field ml-5">
+            <%= f.label :脱出成功回数 %>
+            <p class="control has-icons-left has-icons-right">
+              <%= f.text_field :clear_time, autofocus: true, class:"input is-primary", type:"name", placeholder:"例：5"%>
+              <span class="icon is-small is-left">
+                <i class="fas fa-check-square"></i>
+              </span>
+            </p>
+          </div>
         </div>
         <%= f.submit "編集する", class:"button is-info is-rounded"%>
         <% end %>
