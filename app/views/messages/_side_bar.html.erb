@@ -30,29 +30,7 @@
       </span>
       <%= form.submit "検索", class: "button is-info is-rounded mt-3 ml-3" %>
     <% end %>
-
-
-    <%= search_form_for @p, url: search_rooms_path do |f| %>
-    <%= f.label :prefecture_name_eq, '場所' %>
-    <%= f.collection_select :prefecture_name_eq, @rooms_name, :name, :name, include_blank: '指定なし' %>
-    <br>
-    <%= f.label :year_name_eq, '期間(年)' %>
-    <%= f.collection_select :year_name_eq, @product_size, :name, :name, include_blank: '指定なし'%>
-    <br>
-    <%= f.label :month_name_eq, '期間(月)' %>
-    <%= f.collection_select :month_name_eq, @product_status, :name, :name, include_blank: '指定なし'%>
-    <br>
-    <%= f.label :capacity_name_eq, '定員' %>
-    <%= f.collection_select :capacity_name_eq, @category_name, :name, :name, include_blank: '指定なし' %>
-    <br>
-    <%= f.submit '検索' %>
-    <br>
-    <% end %>
-
-
   </div>
-
-
   <div class="rooms is-block">
     <% @rooms.each do |room| %>
       <div class="panel-block">
