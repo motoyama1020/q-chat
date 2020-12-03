@@ -1,4 +1,13 @@
 ja:
+ activerecord:
+   attributes:
+     user:
+       name: ニックネーム
+     message:
+       content: メッセージ
+       image: 画像
+
+ja:
   time:
     formats:
-      default: "%Y/%m/%d %H:%M:%S"
+      default: "%m/%d %H:%M"
