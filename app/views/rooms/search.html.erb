@@ -4,4 +4,15 @@
     <%= render "messages/side_bar" %>
   </div>
   <%= render "shared/introduction" %>
+  <% if @results.length !=0 %>
+  <% @results.each do |result| %>
+    <td>
+    <br>
+    <li>
+      <%= result.name %>
+    </li>
+  <% end %>
+<% else %>
+  該当する商品はありません
+<% end %>
 </div>
