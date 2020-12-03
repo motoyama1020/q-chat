@@ -3,49 +3,5 @@
   <div class='column'>
     <%= render "messages/side_bar" %>
   </div>
-  <div class='column box m-5 '>
-    <section class="  hero is-warning">
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title">
-            謎解きメンバーを集めよう！
-          </h1>
-          <h2 class="subtitle">
-            ログインしてルームの検索or作成から
-          </h2>
-        </div>
-      </div>
-    </section>
-    <div class="button is-link is-outlined mt-3">
-      <%= link_to "リアル脱出ゲームとは(SCRAP)", "https://realdgame.jp/", target:"_blank", rel:"noopener noreferrer"%>
-    </div>
-    <div class="button is-link is-outlined mt-3 ml-3">
-      <%= link_to "謎解きイベントとは(タカラッシュ)", "https://www.takarush.jp/", target:"_blank", rel:"noopener noreferrer" %>
-    </div>
-    <div class="navbar mt-3 has-text-danger is-size-4">
-      開催中 ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
-    </div>
-    <div class="is-flex is-justify-content-space-between">
-      <a href="https://realdgame.jp/fuusa_maoujo/?utm_source=realdgame&utm_medium=referral&utm_campaign=event_fuusa_maoujo" target="_blank" rel="noopener noreferrer">
-        <figure class="image is-128x128">
-          <img src="https://realdgame.jp/event/upload/%E5%B0%81%E9%8E%96%E9%AD%94%E7%8E%8B%E5%9F%8E_660%C3%97934.jpg">
-        </figure>
-      </a>
-      <a href="https://realdgame.jp/event/twintowerhotel.html" target="_blank" rel="noopener noreferrer">
-        <figure class="image is-128x128">
-          <img src="https://realdgame.jp/event/upload/twintowerhotel_visual_600.jpg">
-        </figure>
-      </a>
-      <a href="https://realdgame.jp/worldnazo/" target="_blank" rel="noopener noreferrer">
-        <figure class="image is-128x128">
-          <img src="https://realdgame.jp/event/upload/0803_WMT_KVFIX_RGB.jpg">
-        </figure>
-      </a>
-      <a href="https://realdgame.jp/bikkuri_kousaku/?utm_source=realdgame&utm_medium=referral&utm_campaign=event_bikkuri_kousaku" target="_blank" rel="noopener noreferrer">
-        <figure class="image is-128x128">
-          <img src="https://realdgame.jp/event/upload/Bikkuri2_visual.jpg">
-        </figure>
-      </a>
-    </div>
-  </div>
+  <%= render "shared/introduction" %>
 </div>

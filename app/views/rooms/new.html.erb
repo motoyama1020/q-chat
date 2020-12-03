@@ -24,7 +24,7 @@
           </div>
           <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
           <div class="is-flex is-justify-content-space-between mt-4">
-            <div class="is-justify-content-space-between">
+            <div class="weight-bold-text">
               期間(西暦)
               <span class="has-text-danger">必須</span>
               <%= f.collection_select(:year_id, Year.all, :id, :name, {}, {class:"button is-rounded"}) %>

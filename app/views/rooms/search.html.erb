@@ -1,14 +1,7 @@
-<div class="column pl-5">
-    <%= render "shared/side_header" %>
-    <div class="rooms is-block">
-      <% @rooms.each do |room| %>
-        <div class="panel-block">
-          <span class="panel-icon">
-            <i class="fas fa-book" aria-hidden="true"></i>
-          </span>
-          <%= link_to room.name, room_messages_path(room) %>
-        </div>
-      <% end %>
-    </div>
-  </article>
+<%= render "shared/header" %>
+<div class="columns">
+  <div class='column'>
+    <%= render "messages/side_bar" %>
+  </div>
+  <%= render "shared/introduction" %>
 </div>

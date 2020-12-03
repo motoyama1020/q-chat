@@ -12,20 +12,24 @@
         <%= link_to "新規アカウント登録", new_user_registration_path, class:'button is-link is-focused ' %>
       </div>
       <div class="fields box">
-      <%= form_with model: resource, as: resource_name, url: session_path(resource_name), local: true do |f|%>
-        <%= render 'shared/error_messages', model: f.object %>
-        <div class="field">
-          <%= f.label :email%>
-          <p class="control has-icons-left has-icons-right">
-            <%= f.email_field :email, autofocus: true, class:"input is-primary", type:"email", placeholder:"Email"%>
-            <span class="icon is-small is-left">
-              <i class="fas fa-envelope"></i>
-            </span>
-            <span class="icon is-small is-right">
-              <i class="fas fa-check"></i>
-            </span>
-          </p>
+        <div class='login-flash-message has-text-danger'>
+          <%= flash[:notice] %>
+          <%= flash[:alert] %>
         </div>
+        <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+          <%= render 'shared/error_messages', model: f.object %>
+          <div class="field">
+            <%= f.label :email%>
+            <p class="control has-icons-left has-icons-right">
+              <%= f.email_field :email, autofocus: true, class:"input is-primary", type:"email", placeholder:"Email"%>
+              <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+              </span>
+              <span class="icon is-small is-right">
+                <i class="fas fa-check"></i>
+              </span>
+            </p>
+          </div>
         <div class="field">
           <%= f.label :password %>
           <p class="control has-icons-left">
