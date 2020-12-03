@@ -10,11 +10,12 @@ class MessagesController < ApplicationController
 
   def create
     @room = Room.find(params[:room_id])
+    
     @message = @room.messages.new(message_params)
-    if @message.valid?
-      @message.save
+    if @message.save
       redirect_to room_messages_path(@room)
     else
+      @rooms = Room.all.order(created_at: :desc)
       @messages = @room.messages.includes(:user)
       render :index
     end
