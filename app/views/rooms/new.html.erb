@@ -1,6 +1,5 @@
 <div class="columns is-mobile pt-3">
   <div class="column is-three-fifths is-offset-one-fifth">
-    <%= render "shared/header" %>
     <div class="create-room">
       <div class="box">
         <p class="title center">
@@ -45,7 +44,7 @@
               <%= f.collection_select(:capacity_id, Capacity.all, :id, :name, {}, {class:"button is-rounded"}) %>
             </div>
           </div>
-          <%= f.submit class: 'chat-room-form__action-btn button is-link is-focused mt-4'%>
+          <%= f.submit 'ルーム作成', class: 'button is-link is-focused mt-4'%>
         <% end %>
       </div>
     </div>

@@ -1,11 +1,14 @@
 .field_with_errors {
   display: contents;
 }
-.rooms{
-  height: 30vh;
+.search{
+  height: 48vh;
   overflow: scroll;
 }
 .messages{
-  height: 70vh;
+  height: 64vh;
   overflow: scroll;
+}
+.intro{
+  height: 500px;
 }

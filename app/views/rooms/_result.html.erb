@@ -1,0 +1,14 @@
+<div class="search column">
+  <% if @results.length !=0 %>
+    <% @results.each do |result| %>
+      <div class="panel-block">
+        <span class="panel-icon">
+          <i class="fas fa-book" aria-hidden="true"></i>
+        </span>
+        <%= link_to result.name, room_messages_path(result) %>
+      </div>
+    <% end %>
+  <% else %>
+    該当する商品はありません
+  <% end %>
+</div>

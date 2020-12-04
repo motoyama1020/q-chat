@@ -1,5 +1,6 @@
 class RoomsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :search]
+  before_action :search_room, only: [:index, :search]
 
   def index
     @rooms = Room.all.order(created_at: :desc)
@@ -26,13 +27,18 @@ class RoomsController < ApplicationController
   end
   
   def search
-    @rooms = Room.search(params[:keyword]).order(created_at: :desc)
+    @results = @p.result.all.order(created_at: :desc)
+    @rooms = Room.search(params[:keyword])
   end
 
   private
 
   def room_params
     params.require(:room).permit(:year_id, :month_id, :capacity_id, :prefecture_id,:name, user_ids: [])
+  end
+
+  def search_room
+    @p = Room.ransack(params[:q])
   end
 
 end

@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
   before_action :authenticate_user!
-  
+  before_action :search_room, only: :index
+
   def index
     @message = Message.new
     @room = Room.find(params[:room_id])
@@ -25,5 +26,9 @@ class MessagesController < ApplicationController
 
   def message_params
     params.require(:message).permit(:content, :image).merge(user_id: current_user.id)
+  end
+
+  def search_room
+    @p = Room.ransack(params[:q])
   end
 end

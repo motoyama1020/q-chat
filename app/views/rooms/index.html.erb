@@ -1,7 +1,24 @@
-<%= render "shared/header" %>
 <div class="columns">
   <div class='column'>
     <%= render "shared/side_bar" %>
+    <article class="panel is-info ml-3 mr-3">
+      <p class=" panel-heading">
+        チャットルーム一覧
+      </p>
+      <div class="is-flex">
+        <%= render "search_bar" %>
+        <div class="search column">
+          <% @rooms.each do |room| %>
+            <div class="panel-block">
+              <span class="panel-icon">
+                <i class="fas fa-book" aria-hidden="true"></i>
+              </span>
+              <%= link_to room.name, room_messages_path(room) %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </article>
   </div>
   <%= render "shared/introduction" %>
 </div>

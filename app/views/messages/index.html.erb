@@ -1,8 +1,11 @@
 <div class="columns">
-  <div class="column column is-one-quarter">
+  <div class="column is-one-quarter">
     <%= render "shared/side_bar" %>
+    <div class="box ml-3 mr-3">
+      <%= render "rooms/search_bar" %>
+    </div>
   </div>
-  <div class="column column is-three-quarters">
+  <div class="column is-three-quarters">
     <%= render "main_chat"%>
   </div>
 </div>
