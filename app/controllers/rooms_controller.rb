@@ -2,7 +2,7 @@ class RoomsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :search]
 
   def index
-    @rooms = Room.includes(:user).order(created_at: :desc)
+    @rooms = Room.all.order(created_at: :desc)
   end
 
   def new
@@ -30,7 +30,7 @@ class RoomsController < ApplicationController
   private
 
   def room_params
-    params.require(:room).permit(:year_id, :month_id, :capacity_id, :prefecture_id,:name, user_ids: [])
+    params.require(:room).permit(:year_id, :month_id, :capacity_id, :prefecture_id,:name, user_ids: [] )
   end
 
 end
