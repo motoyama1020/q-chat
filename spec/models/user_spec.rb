@@ -11,8 +11,8 @@ describe User do
       end
 
       it "passwordが6文字以上であれば登録できること" do
-        @user.password = "123456"
-        @user.password_confirmation = "123456"
+        @user.password = "12345a"
+        @user.password_confirmation = "12345a"
         expect(@user).to be_valid
       end
     end
@@ -36,16 +36,30 @@ describe User do
         expect(@user.errors.full_messages).to include("パスワードを入力してください")
       end
 
-      it "passwordが5文字以下であれば登録できないこと" do
-        @user.password = "12345"
-        @user.password_confirmation = "12345"
+      it 'passwordは全角英数字語のみだと登録できない' do
+        @user.password = '０３３AAA'
+        @user.password_confirmation = '０３３AAA'
         @user.valid?
-        expect(@user.errors.full_messages).to include("パスワードは6文字以上で入力してください")
+        expect(@user.errors.full_messages).to include('パスワードは不正な値です')
+      end
+
+      it 'passwordは半角英語のみだと登録できない' do
+        @user.password = 'aaaaaa'
+        @user.password_confirmation = 'aaaaaa'
+        @user.valid?
+        expect(@user.errors.full_messages).to include('パスワードは不正な値です')
+      end
+
+      it 'passwordが5文字以下であれば登録できない' do
+        @user.password = 'a1a1a'
+        @user.password_confirmation = 'a1a1a'
+        @user.valid?
+        expect(@user.errors.full_messages).to include('パスワードは6文字以上で入力してください')
       end
 
       it "passwordとpassword_confirmationが不一致では登録できないこと" do
-        @user.password = "123456"
-        @user.password_confirmation = "1234567"
+        @user.password = "12345a"
+        @user.password_confirmation = "12345b"
         @user.valid?
         expect(@user.errors.full_messages).to include("パスワード（確認用）とパスワードの入力が一致しません")
       end
