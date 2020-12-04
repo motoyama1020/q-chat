@@ -11,7 +11,7 @@ class Room < ApplicationRecord
 
   validates :name, presence: true
   
-  with_options numericality: { other_than: 0 } do
+  with_options numericality: { other_than: 0, message:'を選択してください' } do
     validates :year_id
     validates :month_id
     validates :prefecture_id
