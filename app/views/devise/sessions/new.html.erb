@@ -1,4 +1,4 @@
-<div class="columns is-mobile p-6">
+<div class="columns is-mobile pt-6">
   <div class="column is-three-fifths is-offset-one-fifth">
     <div class="signin">
       <div class="box">
@@ -29,18 +29,17 @@
               </span>
             </p>
           </div>
-          <div class="field">
-            <%= f.label :password %>
-            <p class="control has-icons-left">
-              <%= f.password_field :password, autocomplete: "off", class:"input is-primary", type:"password", placeholder:"Password"%>
-              <span class="icon is-small is-left">
-                <i class="fas fa-lock"></i>
-              </span>
-            </p>
-          </div>
-          <%= f.submit "ログイン", class:"button is-info is-rounded "%>
-        <% end %>
-      </div>
+        <div class="field">
+          <%= f.label :password %>
+          <p class="control has-icons-left">
+            <%= f.password_field :password, autocomplete: "off", class:"input is-primary", type:"password", placeholder:"Password"%>
+            <span class="icon is-small is-left">
+              <i class="fas fa-lock"></i>
+            </span>
+          </p>
+        </div>
+        <%= f.submit "ログイン", class:"button is-info is-rounded "%>
+      <% end %>
     </div>
   </div>
 </div>
