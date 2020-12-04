@@ -28,7 +28,7 @@
               <% if @user.event_time.present? %>
                 <td class="detail-value"><%= "#{@user.event_time}回" %></td>
               <% else %>
-                <td class="detail-value"><%= "?回" %></td>
+                <td class="detail-value"><%= "入力してね" %></td>
               <% end %>
             </tr>
             <tr>
@@ -36,12 +36,12 @@
               <% if @user.clear_time.present? %>
                 <td class="detail-value"><%= "#{@user.clear_time}回" %></td>
               <% else %>
-                <td class="detail-value"><%= "?回" %></td>
+                <td class="detail-value"><%= "入力してね" %></td>
               <% end %>
             </tr>
             <tr>
               <th class="detail-item">成功率</th>
-              <% if @user.event_time.present? %>
+              <% if @user.event_time.present? && @user.clear_time.present?%>
                 <td class="detail-value"><%= "#{@user.clear_time*100 / @user.event_time}%" %></td>
               <% else %>
                 <td class="detail-value"><%= "?%" %></td>
