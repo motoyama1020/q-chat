@@ -9,9 +9,9 @@ class User < ApplicationRecord
 
   validates :name, presence: true
 
-  with_options format: { with: /\A[0-9]+\z/},on: :update, allow_nil: true do
-    validates :event_time, numericality: { greater_than_or_equal_to: 1}
-    validates :clear_time, numericality: { greater_than_or_equal_to: 0}
+  with_options format: { with: /\A[0-9]+\z/ }, on: :update, allow_nil: true do
+    validates :event_time, numericality: { greater_than_or_equal_to: 1 }
+    validates :clear_time, numericality: { greater_than_or_equal_to: 0 }
   end
 
   has_many :room_users

@@ -13,9 +13,9 @@ describe Room do
 
     context 'ルーム作成がうまくいかないとき' do
       it 'nameが空だと登録できない' do
-        @room.name = ""
+        @room.name = ''
         @room.valid?
-        expect(@room.errors.full_messages).to include("ルーム名を入力してください")
+        expect(@room.errors.full_messages).to include('ルーム名を入力してください')
       end
 
       it 'capacity_idが0だと登録できない' do
