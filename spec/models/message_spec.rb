@@ -10,12 +10,12 @@ RSpec.describe Message, type: :model do
       it 'contentとimageが存在していれば保存できること' do
         expect(@message).to be_valid
       end
-  
+
       it 'contentが空でも保存できること' do
         @message.content = nil
         expect(@message).to be_valid
       end
-  
+
       it 'imageが空でも保存できること' do
         @message.image = nil
         expect(@message).to be_valid
@@ -27,19 +27,19 @@ RSpec.describe Message, type: :model do
         @message.content = nil
         @message.image = nil
         @message.valid?
-        expect(@message.errors.full_messages).to include("テキストを入力してください")
+        expect(@message.errors.full_messages).to include('テキストを入力してください')
       end
 
       it 'roomが紐付いていないと保存できないこと' do
         @message.room = nil
         @message.valid?
-        expect(@message.errors.full_messages).to include("Roomを入力してください")
+        expect(@message.errors.full_messages).to include('Roomを入力してください')
       end
 
       it 'userが紐付いていないと保存できないこと' do
         @message.user = nil
         @message.valid?
-        expect(@message.errors.full_messages).to include("Userを入力してください")
+        expect(@message.errors.full_messages).to include('Userを入力してください')
       end
     end
   end
