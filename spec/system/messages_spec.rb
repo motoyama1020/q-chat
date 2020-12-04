@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'メッセージ投稿機能', type: :system do
+RSpec.describe "メッセージ投稿機能", type: :system do
   before do
     # 中間テーブルを作成して、usersテーブルとroomsテーブルのレコードを作成する
     @room_user = FactoryBot.create(:room_user)
@@ -15,9 +15,9 @@ RSpec.describe 'メッセージ投稿機能', type: :system do
       click_on(@room_user.room.name)
 
       # DBに保存されていないことを確認する
-      expect do
+      expect {
         find('input[name="commit"]').click
-      end.not_to change { Message.count }
+      }.not_to change { Message.count }
 
       # 元のページに戻ってくることを確認する
       expect(current_path).to eq room_messages_path(@room_user.room)
@@ -33,13 +33,13 @@ RSpec.describe 'メッセージ投稿機能', type: :system do
       click_on(@room_user.room.name)
 
       # 値をテキストフォームに入力する
-      post = 'テスト'
+      post = "テスト"
       fill_in 'message_content', with: post
 
       # 送信した値がDBに保存されていることを確認する
-      expect do
+      expect {
         find('input[name="commit"]').click
-      end.to change { Message.count }.by(1)
+      }.to change { Message.count }.by(1)
 
       # 投稿一覧画面に遷移していることを確認する
       expect(current_path).to eq room_messages_path(@room_user.room)
@@ -62,15 +62,15 @@ RSpec.describe 'メッセージ投稿機能', type: :system do
       attach_file('message[image]', image_path, make_visible: true)
 
       # 送信した値がDBに保存されていることを確認する
-      expect do
+      expect {
         find('input[name="commit"]').click
-      end.to change { Message.count }.by(1)
+      }.to change { Message.count }.by(1)
 
       # 投稿一覧画面に遷移していることを確認する
       expect(current_path).to eq room_messages_path(@room_user.room)
 
       # 送信した画像がブラウザに表示されていることを確認する
-      expect(page).to have_selector('img')
+      expect(page).to have_selector("img")
     end
 
     it 'テキストと画像の投稿に成功すること' do
@@ -87,36 +87,36 @@ RSpec.describe 'メッセージ投稿機能', type: :system do
       attach_file('message[image]', image_path, make_visible: true)
 
       # 値をテキストフォームに入力する
-      post = 'テスト'
+      post = "テスト"
       fill_in 'message_content', with: post
 
       # 送信した値がDBに保存されていることを確認する
-      expect do
+      expect {
         find('input[name="commit"]').click
-      end.to change { Message.count }.by(1)
+      }.to change { Message.count }.by(1)
 
       # 送信した値がブラウザに表示されていることを確認する
       expect(page).to have_content(post)
 
       # 送信した画像がブラウザに表示されていることを確認する
-      expect(page).to have_selector('img')
+      expect(page).to have_selector("img")
     end
 
     it 'チャットルームを削除すると、関連するメッセージがすべて削除されていること' do
       # サインインする
       sign_in(@room_user.user)
-
+  
       # 作成されたチャットルームへ遷移する
       click_on(@room_user.room.name)
-
+  
       # メッセージ情報を5つDBに追加する
       FactoryBot.create_list(:message, 5, room_id: @room_user.room.id, user_id: @room_user.user.id)
-
+  
       # 「チャットを終了する」ボタンをクリックすることで、作成した5つのメッセージが削除されていることを確認する
-      expect do
-        find_link('チャットを終了する', href: room_path(@room_user.room)).click
-      end.to change { @room_user.room.messages.count }.by(-5)
-
+      expect {
+        find_link("チャットを終了する",  href: room_path(@room_user.room)).click
+      }.to change { @room_user.room.messages.count }.by(-5)
+  
       # トップページに遷移していることを確認する
       expect(current_path).to eq root_path
     end

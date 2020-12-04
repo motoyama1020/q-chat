@@ -6,34 +6,34 @@ describe User do
 
   describe 'ユーザー新規登録' do
     context '新規登録がうまくいくとき' do
-      it 'nameとemail、passwordとpassword_confirmationが存在すれば登録できること' do
+      it "nameとemail、passwordとpassword_confirmationが存在すれば登録できること" do
         expect(@user).to be_valid
       end
 
-      it 'passwordが6文字以上であれば登録できること' do
-        @user.password = '12345a'
-        @user.password_confirmation = '12345a'
+      it "passwordが6文字以上であれば登録できること" do
+        @user.password = "12345a"
+        @user.password_confirmation = "12345a"
         expect(@user).to be_valid
       end
     end
 
     context '新規登録がうまくいかないとき' do
-      it 'nameが空では登録できないこと' do
+      it "nameが空では登録できないこと" do
         @user.name = nil
         @user.valid?
-        expect(@user.errors.full_messages).to include('ニックネームを入力してください')
+        expect(@user.errors.full_messages).to include("ニックネームを入力してください")
       end
 
-      it 'emailが空では登録できないこと' do
+      it "emailが空では登録できないこと" do
         @user.email = nil
         @user.valid?
-        expect(@user.errors.full_messages).to include('Eメールを入力してください')
+        expect(@user.errors.full_messages).to include("Eメールを入力してください")
       end
 
-      it 'passwordが空では登録できないこと' do
+      it "passwordが空では登録できないこと" do
         @user.password = nil
         @user.valid?
-        expect(@user.errors.full_messages).to include('パスワードを入力してください')
+        expect(@user.errors.full_messages).to include("パスワードを入力してください")
       end
 
       it 'passwordは全角英数字語のみだと登録できない' do
@@ -57,18 +57,18 @@ describe User do
         expect(@user.errors.full_messages).to include('パスワードは6文字以上で入力してください')
       end
 
-      it 'passwordとpassword_confirmationが不一致では登録できないこと' do
-        @user.password = '12345a'
-        @user.password_confirmation = '12345b'
+      it "passwordとpassword_confirmationが不一致では登録できないこと" do
+        @user.password = "12345a"
+        @user.password_confirmation = "12345b"
         @user.valid?
-        expect(@user.errors.full_messages).to include('パスワード（確認用）とパスワードの入力が一致しません')
+        expect(@user.errors.full_messages).to include("パスワード（確認用）とパスワードの入力が一致しません")
       end
-
-      it '重複したemailが存在する場合登録できないこと' do
+      
+      it "重複したemailが存在する場合登録できないこと" do
         @user.save
         another_user = FactoryBot.build(:user, email: @user.email)
         another_user.valid?
-        expect(another_user.errors.full_messages).to include('Eメールはすでに存在します')
+        expect(another_user.errors.full_messages).to include("Eメールはすでに存在します")
       end
     end
   end
@@ -80,40 +80,40 @@ describe User do
       end
 
       it 'event_time,clear_timeがなくても編集できること' do
-        @user.event_time = ''
-        @user.clear_time = ''
+        @user.event_time = ""
+        @user.clear_time = ""
         expect(@user).to be_valid
       end
 
       it 'event_timeがなくても編集できること' do
-        @user.event_time = ''
+        @user.event_time = ""
         expect(@user).to be_valid
       end
 
       it 'clear_timeがなくても編集できること' do
-        @user.clear_time = ''
+        @user.clear_time = ""
         expect(@user).to be_valid
       end
     end
 
     context 'ユーザー情報編集がうまくいかないとき' do
-      it 'nameが空では登録できないこと' do
+      it "nameが空では登録できないこと" do
         @user.name = nil
         @user.valid?
-        expect(@user.errors.full_messages).to include('ニックネームを入力してください')
+        expect(@user.errors.full_messages).to include("ニックネームを入力してください")
       end
 
-      it 'emailが空では登録できないこと' do
+      it "emailが空では登録できないこと" do
         @user.email = nil
         @user.valid?
-        expect(@user.errors.full_messages).to include('Eメールを入力してください')
+        expect(@user.errors.full_messages).to include("Eメールを入力してください")
       end
 
-      it '重複したemailが存在する場合登録できないこと' do
+      it "重複したemailが存在する場合登録できないこと" do
         @user.save
         another_user = FactoryBot.build(:user, email: @user.email)
         another_user.valid?
-        expect(another_user.errors.full_messages).to include('Eメールはすでに存在します')
+        expect(another_user.errors.full_messages).to include("Eメールはすでに存在します")
       end
     end
   end

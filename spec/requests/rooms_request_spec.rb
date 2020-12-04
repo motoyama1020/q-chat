@@ -1,4 +1,5 @@
 require 'rails_helper'
 
-RSpec.describe 'Rooms', type: :request do
+RSpec.describe "Rooms", type: :request do
+
 end

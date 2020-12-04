@@ -10,8 +10,8 @@ class Room < ApplicationRecord
   has_many :messages, dependent: :destroy
 
   validates :name, presence: true
-
-  with_options numericality: { other_than: 0, message: 'を選択してください' } do
+  
+  with_options numericality: { other_than: 0, message:'を選択してください' } do
     validates :year_id
     validates :month_id
     validates :prefecture_id
@@ -19,10 +19,11 @@ class Room < ApplicationRecord
   end
 
   def self.search(search)
-    if search != ''
+    if search != ""
       Room.where('name LIKE(?)', "%#{search}%")
     else
       Room.all
     end
-  end
+  end  
 end
+
