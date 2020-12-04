@@ -60,4 +60,47 @@ describe User do
   end
 
   describe 'ユーザー情報編集' do
+    context 'ユーザー情報編集がうまく行くとき' do
+      it 'name,email,event_time,clear_timeが存在すれば編集できること' do
+        expect(@user).to be_valid
+      end
+
+      it 'event_time,clear_timeがなくても編集できること' do
+        @user.event_time = ""
+        @user.clear_time = ""
+        expect(@user).to be_valid
+      end
+
+      it 'event_timeがなくても編集できること' do
+        @user.event_time = ""
+        expect(@user).to be_valid
+      end
+
+      it 'clear_timeがなくても編集できること' do
+        @user.clear_time = ""
+        expect(@user).to be_valid
+      end
+    end
+
+    context 'ユーザー情報編集がうまくいかないとき' do
+      it "nameが空では登録できないこと" do
+        @user.name = nil
+        @user.valid?
+        expect(@user.errors.full_messages).to include("ニックネームを入力してください")
+      end
+
+      it "emailが空では登録できないこと" do
+        @user.email = nil
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Eメールを入力してください")
+      end
+
+      it "重複したemailが存在する場合登録できないこと" do
+        @user.save
+        another_user = FactoryBot.build(:user, email: @user.email)
+        another_user.valid?
+        expect(another_user.errors.full_messages).to include("Eメールはすでに存在します")
+      end
+    end
+  end
 end

@@ -5,5 +5,7 @@ FactoryBot.define do
     password = Faker::Internet.password(min_length: 6)
     password {password}
     password_confirmation {password}
+    event_time = Faker::Number.number
+    clear_time = Faker::Number.number
   end
 end
