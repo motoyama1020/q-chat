@@ -12,10 +12,10 @@ class Room < ApplicationRecord
   validates :name, presence: true
   
   with_options numericality: { other_than: 0 } do
+    validates :year_id
+    validates :month_id
     validates :prefecture_id
     validates :capacity_id
-    validates :month_id
-    validates :year_id
   end
 
   def self.search(search)

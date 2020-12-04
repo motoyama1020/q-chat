@@ -1,0 +1,16 @@
+ja:
+ activerecord:
+   attributes:
+      user:
+        name: ニックネーム
+        event_time: イベント参加回数
+        clear_time: クリア回数
+      message:
+        content: テキスト
+        image: 画像
+      room:
+        name: ルーム名
+        prefecture_id: 都道府県
+        capacity_id: 定員
+        month_id: 期間(月)
+        year_id: 期間(年)
