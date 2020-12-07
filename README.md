@@ -22,7 +22,8 @@
 自分もこの様な問題に直面して、予め組む人とコミュニケーションが取れるサービスがあったら、もっと謎解きを楽しめるし、初心者の人でも安心して参加できるのではないかと考え、このサービスを作ろうと思いました。
 
 ## URL
-要件定義 スプレッドシート
+要件定義 
+https://docs.google.com/spreadsheets/d/1A0YX617IfG6-_adEmP4nZPCO1LmcpFChfyOzz1AaF24/edit#gid=282075926
 
 ## 利用の仕方
 【リーダー側】
@@ -32,16 +33,24 @@
 - ルームの情報（何の謎解きか、場所、期間、レベル）を確認して、自分の条件にマッチしたルームに入る。
 
 ## 機能一覧
-- ユーザー管理機能(devise)
-  →ニックネーム、イベント参加回数、クリア回数、得意分野
-- チャットルーム作成＆削除機能
+- ユーザーログイン機能
+  →　deviseの導入
+- ユーザー情報編集機能(onオプション)
+  →　イベント参加回数、クリア回数、成功率の出力
+- チャットルーム作成機能
+  →　ActiveHashの導入
 - メッセージ＆画像投稿機能
+  →　ActiveStrage,AWS(S3)の導入
 - チャットルーム検索機能
+  →　ransackの導入
 
 これから実装したい機能
+- 投稿者アイコン機能
 - 定員制限機能
-- メンバー評価機能
+- レーティングスター機能
   →チャットルームを組んだことがあるという制限を付けたい
+- ゲストログイン
+- パンくずリスト
 - ランキング機能
   →イベント参加回数、クリア回数、他己評価
 
@@ -49,8 +58,8 @@
 ## 環境・使用技術
 
 ### フロントエンド
-- Bulma@ 0.9.1
 - HTML/CSS
+- Bulma@ 0.9.1
 
 ### バックエンド
 - Ruby 2.6.5
@@ -58,7 +67,7 @@
 
 ### インフラ
 - MySQL2
-- AWS
+- AWS　S3
 
 ### テスト
 - RSpec
@@ -66,17 +75,19 @@
 - faker
 
 ## ER図
-https://gyazo.com/f553d9ef9b507f3b3f8fbbba25067716
+https://i.gyazo.com/fc087c13a0a7795bb3ab97b1c1ccfb2e.png
 
 # テーブル設計
 
 ## users テーブル
 
-| Column   | Type   | Options     |
-| -------- | ------ | ----------- |
-| name     | string | null: false |
-| email    | string | null: false |
-| password | string | null: false |
+| Column             | Type    | Options                   |
+| ------------------ | ------- | ------------------------- |
+| name               | string  | null: false               |
+| email              | string  | null: false, unique: true |
+| encrypted_password | string  | null: false, unique: true |
+| event_time         | integer |                           |
+| clear_time         | integer |                           |
 
 ### Association
 
@@ -86,9 +97,14 @@ https://gyazo.com/f553d9ef9b507f3b3f8fbbba25067716
 
 ## rooms テーブル
 
-| Column | Type   | Options     |
-| ------ | ------ | ----------- |
-| name   | string | null: false |
+| Column        | Type    | Options     |
+| ------------- | ------- | ----------- |
+| name          | string  | null: false |
+| year_id       | integer | null: false |
+| month_id      | integer | null: false |
+| prefecture_id | integer | null: false |
+| capacity_id   | integer | null: false |
+
 
 ### Association
 
@@ -112,7 +128,7 @@ https://gyazo.com/f553d9ef9b507f3b3f8fbbba25067716
 
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
-| content | string     |                                |
+| content | string     | null: false                    |
 | user    | references | null: false, foreign_key: true |
 | room    | references | null: false, foreign_key: true |
 
