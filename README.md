@@ -46,6 +46,7 @@ https://docs.google.com/spreadsheets/d/1A0YX617IfG6-_adEmP4nZPCO1LmcpFChfyOzz1Aa
 
 これから実装したい機能
 - 投稿者アイコン機能
+- テキスト投稿非同期通信
 - 定員制限機能
 - レーティングスター機能
   →チャットルームを組んだことがあるという制限を付けたい
