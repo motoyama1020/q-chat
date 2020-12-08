@@ -43,9 +43,9 @@ https://docs.google.com/spreadsheets/d/1A0YX617IfG6-_adEmP4nZPCO1LmcpFChfyOzz1Aa
   →　ActiveStrage,AWS(S3)の導入
 - チャットルーム検索機能
   →　ransackの導入
+- ユーザーアイコン表示
 
 これから実装したい機能
-- 投稿者アイコン機能
 - テキスト投稿非同期通信
 - 定員制限機能
 - レーティングスター機能
