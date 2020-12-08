@@ -1,15 +1,13 @@
-<div class="column">
-  <div class="user box">
+<div class="column box">
     <% if user_signed_in? %>
-      <%= link_to "#{current_user.name}のマイページ", user_path(current_user), class:'button is-primary is-focused m-2'%>
+     　<%= link_to (image_tag "人物アイコン (2).png"), user_path(current_user), class:'button is-primary m-2'%>
     <% else%>
       <%= link_to 'ゲストログイン（閲覧用）', users_guest_sign_in_path, method: :post , class:'button is-success is-focused m-2'%>
-      <%= link_to "ログイン", new_user_session_path, class:'button is-primary is-focused m-2' %>
-      <%= link_to "新規アカウント登録", new_user_registration_path, class:'button is-link is-focused m-2' %>
+      <%= link_to (image_tag "ログイン・サインインのアイコン素材 4.png"), new_user_session_path, class:'button is-primary is-focused m-2' %>
+      <%= link_to (image_tag "登録アイコン.png"), new_user_registration_path, class:'button is-link is-focused m-2' %>
     <% end %>
     <% if user_signed_in? %>
-      <%= link_to "ルームを作成する", new_room_path, class:'button is-link is-focused m-2' %>
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'button is-success is-focused m-2'%>
+      <%= link_to (image_tag "会議アイコン1.png"), new_room_path, class:'button is-link is-focused m-2' %>
+      <%= link_to (image_tag "ログアウト・サインアウトのアイコン素材 3.png"), destroy_user_session_path, method: :delete, class: 'button is-success is-focused m-2'%>
     <% end %>
-  </div>
 </div>

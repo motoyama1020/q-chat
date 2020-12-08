@@ -8,9 +8,9 @@
         <p class="subtitle">
           マイページ
         </p>
-        <%= link_to "ユーザー情報編集", edit_user_path(@user), class:'button is-link is-focused'%>
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'button is-success is-focused ml-2'%>
-        <%= link_to "ルーム一覧に戻る", rooms_path(current_user), class: 'button is-success is-light ml-2'%>
+        <%= link_to (image_tag "鉛筆を持つ手のアイコン.png"), edit_user_path(@user), class:'button is-link is-focused m-2'%>
+        <%= link_to (image_tag "ログアウト・サインアウトのアイコン素材 3.png"), destroy_user_session_path, method: :delete, class: 'button is-success is-focused m-2'%>
+        <%= link_to (image_tag "Uターン矢印 2.png"), rooms_path(current_user), class: 'button is-success is-light m-2'%>
       </div>
       <div class="box columns">
         <div class="column is-one-third">

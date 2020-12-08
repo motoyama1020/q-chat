@@ -8,7 +8,7 @@
         <p class="subtitle">
           登録しているユーザーでログイン 
         </p>
-        <%= link_to "新規アカウント登録", new_user_registration_path, class:'button is-link is-focused ' %>
+        <%= link_to (image_tag "登録アイコン.png"), new_user_registration_path, class:'button is-link is-focused ' %>
       </div>
       <div class="fields box">
         <div class='login-flash-message has-text-danger'>
@@ -38,7 +38,12 @@
             </span>
           </p>
         </div>
-        <%= f.submit "ログイン", class:"button is-info is-rounded "%>
+        <div class="m-2">
+          <label>
+            <%= image_tag "ログイン・サインインのアイコン素材 4.png", class: 'button is-primary is-focused m-2'%>
+            <%= f.submit class:'is-hidden' %>
+          </label>
+        </div>
       <% end %>
       </div>
     </div>

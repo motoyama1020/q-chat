@@ -39,7 +39,12 @@
             </p>
           </div>
         </div>
-        <%= f.submit "編集する", class:"button is-info is-rounded"%>
+        <div class="m-2">
+          <label>
+            <%= image_tag "万年筆のペン先アイコン.png", class: 'button is-info is-rounded'%>
+            <%= f.submit class:'is-hidden' %>
+          </label>
+        </div>
         <% end %>
       </div>
     </div>
