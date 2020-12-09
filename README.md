@@ -11,7 +11,11 @@
 
 これは謎解きが好きな方の為の、体験型ゲームに参加する際のメンバー募集サイトです。
 
+### チャットルーム機能
 [![Image from Gyazo](https://i.gyazo.com/0870066994e02fa58bc014a390ba3732.gif)](https://gyazo.com/0870066994e02fa58bc014a390ba3732)
+
+### カテゴリ検索機能
+[![Image from Gyazo](https://i.gyazo.com/bd62d99551859ed72db8fc55ce72e70a.gif)](https://gyazo.com/bd62d99551859ed72db8fc55ce72e70a)
 
 ## 作成の背景
 リアル脱出ゲームはご存知ですか？
