@@ -14,8 +14,6 @@
 ### チャットルーム機能
 [![Image from Gyazo](https://i.gyazo.com/f8982e38edd590d01b38d009b793a874.gif)](https://gyazo.com/f8982e38edd590d01b38d009b793a874)
 
-### カテゴリ検索機能
-[![Image from Gyazo](https://i.gyazo.com/bd62d99551859ed72db8fc55ce72e70a.gif)](https://gyazo.com/bd62d99551859ed72db8fc55ce72e70a)
 
 ## 作成の背景
 リアル脱出ゲームはご存知ですか？
@@ -65,11 +63,14 @@
 →イベント参加回数、クリア回数、他己評価
 
 ## 工夫したポイント
-誰が投稿したのか一目でわかるように、メッセージに人物アイコンを紐付けました。
+- 誰が投稿したのか一目でわかるように、メッセージに人物アイコンを紐付けました。
 [![Image from Gyazo](https://i.gyazo.com/de41175799b5deac9d20d2fa14bd45f4.png)](https://gyazo.com/de41175799b5deac9d20d2fa14bd45f4)
 
-ボタンは全てアイコン表示とし、情報量を減らしコンパクトにまとめました。
+- ボタンは全てアイコン表示とし、情報量を減らしコンパクトにまとめました。
 [![Image from Gyazo](https://i.gyazo.com/07f70973cf50fc8b7694d124cca6690e.png)](https://gyazo.com/07f70973cf50fc8b7694d124cca6690e)
+
+- 要素毎で検索が可能となるようにカテゴリ検索機能を付けました。
+[![Image from Gyazo](https://i.gyazo.com/e5ea9f437e3aa42ca92f15e9b332ede4.gif)](https://gyazo.com/e5ea9f437e3aa42ca92f15e9b332ede4)
 
 
 ## 環境・使用技術
