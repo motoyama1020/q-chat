@@ -44,19 +44,22 @@ https://docs.google.com/spreadsheets/d/1A0YX617IfG6-_adEmP4nZPCO1LmcpFChfyOzz1Aa
 - チャットルーム検索機能
   →　ransackの導入
 - ユーザーアイコン表示
+- ゲストログイン機能
 
-これから実装したい機能
+実装予定の機能
 - テキスト投稿非同期通信
 - 定員制限機能
 - レーティングスター機能
   →チャットルームを組んだことがあるという制限を付けたい
-- ゲストログイン
 - パンくずリスト
 - ランキング機能
   →イベント参加回数、クリア回数、他己評価
 
 
 ## 環境・使用技術
+
+### デプロイ
+- heroku
 
 ### フロントエンド
 - HTML/CSS
@@ -76,7 +79,7 @@ https://docs.google.com/spreadsheets/d/1A0YX617IfG6-_adEmP4nZPCO1LmcpFChfyOzz1Aa
 - faker
 
 ## ER図
-https://i.gyazo.com/fc087c13a0a7795bb3ab97b1c1ccfb2e.png
+![画像の説明](app/assist/images/https://i.gyazo.com/fc087c13a0a7795bb3ab97b1c1ccfb2e.png)
 
 # テーブル設計
 
