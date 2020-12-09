@@ -22,6 +22,9 @@
 自分もこの様な問題に直面して、予め組む人とコミュニケーションが取れるサービスがあったら、もっと謎解きを楽しめるし、初心者の人でも安心して参加できるのではないかと考え、このサービスを作ろうと思いました。
 
 ## URL
+アプリケーション
+- https://q-chat31740.herokuapp.com/
+
 要件定義 
 - https://docs.google.com/spreadsheets/d/1A0YX617IfG6-_adEmP4nZPCO1LmcpFChfyOzz1AaF24/edit#gid=282075926
 
