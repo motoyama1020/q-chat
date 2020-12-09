@@ -23,7 +23,7 @@
 
 ## URL
 要件定義 
-https://docs.google.com/spreadsheets/d/1A0YX617IfG6-_adEmP4nZPCO1LmcpFChfyOzz1AaF24/edit#gid=282075926
+- https://docs.google.com/spreadsheets/d/1A0YX617IfG6-_adEmP4nZPCO1LmcpFChfyOzz1AaF24/edit#gid=282075926
 
 ## 利用の仕方
 【リーダー側】
