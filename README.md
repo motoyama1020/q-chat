@@ -79,7 +79,7 @@ https://docs.google.com/spreadsheets/d/1A0YX617IfG6-_adEmP4nZPCO1LmcpFChfyOzz1Aa
 - faker
 
 ## ER図
-![画像の説明](app/assist/images/https://i.gyazo.com/fc087c13a0a7795bb3ab97b1c1ccfb2e.png)
+![画像の説明](https://i.gyazo.com/fc087c13a0a7795bb3ab97b1c1ccfb2e.png)
 
 # テーブル設計
 
