@@ -20,6 +20,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:clear_time, :event_time, :name, :email, :image)
+    params.require(:user).permit(:clear_time, :event_time, :name, :email)
   end
 end
