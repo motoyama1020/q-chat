@@ -28,6 +28,6 @@ class RoomsController < ApplicationController
   private
 
   def room_params
-    params.require(:room).permit(:year_id, :month_id, :capacity_id, :prefecture_id, :name)
+    params.require(:room).permit(:year_id, :month_id, :capacity_id, :prefecture_id, :name, user_ids: [])
   end
 end
