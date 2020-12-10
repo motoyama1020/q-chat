@@ -2,7 +2,7 @@ class RoomsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :search]
 
   def index
-    @rooms = Room.includes(:users).order(created_at: :desc)
+    @rooms = Room.all.order(created_at: :desc)
   end
 
   def new
