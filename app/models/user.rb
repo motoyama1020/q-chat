@@ -18,14 +18,13 @@ class User < ApplicationRecord
   has_many :messages
   has_one_attached :image
 
-
   def was_attached?
     image.attached?
   end
 
   def self.guest
     find_or_create_by!(email: 'guest@example.com') do |user|
-      user.name = "ゲストユーザー"
+      user.name = 'ゲストユーザー'
       user.password = Faker::Lorem.characters(min_alpha: 1, min_numeric: 1, number: 8)
     end
   end
