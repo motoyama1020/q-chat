@@ -1,14 +1,8 @@
 <div class="message columns mt-1">
   <div class="column is-1">
-    <% if message.user.image.present? %>
-      <figure class="m-1">
-        <%= image_tag message.user.image, class: 'messageicon' if message.user.image.attached? %>
-      </figure>
-    <% else %>
-      <figure class="m-1">
-        <%= image_tag "k0898_2.jpg", class: 'messageicon'%>
-      </figure>
-    <% end %>
+    <figure class="m-1">
+      <%= image_tag message.user.image, class: 'messageicon' if message.user.image.attached? %>
+    </figure>
   </div>
   <div class="column">
     <div class="upper-message">
