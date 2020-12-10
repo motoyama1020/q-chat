@@ -13,6 +13,12 @@
         <%= form_with model: current_user, local: true do |f|%>
         <%= render 'shared/error_messages', model: f.object %>
         <div class="field">
+          <%= f.label :アイコン %>
+          <p>
+          <%= f.file_field :image, class: 'has-text-danger mt-1 ml-1'%>
+          </p>
+        </div>
+        <div class="field">
           <%= f.label :name%>
           <p class="control has-icons-left has-icons-right">
             <%= f.text_field :name, autofocus: true, class:"input is-primary", type:"name", placeholder:"Name"%>
