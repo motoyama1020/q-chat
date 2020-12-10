@@ -8,7 +8,7 @@
         <p class="subtitle">
           新規チャットルーム作成
         </p>
-        <%= link_to "ルーム一覧に戻る", :back, class: 'button is-success is-light'%>
+        <%= link_to (image_tag "Uターン矢印 2.png"), rooms_path(current_user), class: 'button is-success is-light m-2'%>
       </div>
       <div class='chat-room-form box'>
         <%=form_with model: @room, local: true do |f|%>
@@ -44,7 +44,12 @@
               <%= f.collection_select(:capacity_id, Capacity.all, :id, :name, {}, {class:"button is-rounded"}) %>
             </div>
           </div>
-          <%= f.submit 'ルーム作成', class: 'button is-link is-focused mt-4'%>
+          <div class="m-4">
+          <label>
+            <%= image_tag "万年筆のペン先アイコン.png", class: 'button is-info is-rounded'%>
+            <%= f.submit class:'is-hidden' %>
+          </label>
+        </div>
         <% end %>
       </div>
     </div>

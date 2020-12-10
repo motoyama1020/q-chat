@@ -53,6 +53,12 @@
             </p>
           </div>
           <%= f.submit "登録", class:"button is-info is-rounded"%>
+          <div class="m-2">
+          <label>
+            <%= image_tag "登録アイコン.png", class: 'button is-link is-focused'%>
+            <%= f.submit class:'is-hidden' %>
+          </label>
+        </div>
         <% end %>
       </div>
     </div>
