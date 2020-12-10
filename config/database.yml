@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: q_chat_production
-  username: q_chat
-  password: <%= ENV['Q_CHAT_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
