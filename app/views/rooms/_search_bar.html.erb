@@ -1,20 +1,20 @@
 <div class="column">
   <%= search_form_for @p, url: search_rooms_path do |f| %>
-    <div class="">
+    <div class="m-2">
       <%= f.label :name_eq, 'ルーム' %>
-      <%= f.collection_select(:name_eq, Room.select("name").distinct, :name, :name, {include_blank: '指定なし'}, {class:'button is-rounded m-1'}) %>
+      <%= f.collection_select(:name_eq, Room.select("name").distinct, :name, :name, {include_blank: '--'}, {class:'room-name button is-rounded m-1'}) %>
     </div>
     <div class="m-2">
       <%= f.label :year_id_eq, '期間 (年)' %>
-      <%= f.collection_select(:year_id_eq, Year.all, :id, :name, {include_blank: '指定なし'}, {class:'button is-rounded m-2'}) %>
+      <%= f.collection_select(:year_id_eq, Year.all, :id, :name, {}, {class:'button is-rounded m-2'}) %>
     </div>
     <div class="m-2">
       <%= f.label :month_id_eq, '期間 (月)' %>
-      <%= f.collection_select(:month_id_eq, Month.all, :id, :name, {include_blank: '指定なし'}, {class:'button is-rounded m-2'}) %>
+      <%= f.collection_select(:month_id_eq, Month.all, :id, :name, {}, {class:'button is-rounded m-2'}) %>
     </div>
     <div class="m-2">
       <%= f.label :prefecture_id_eq, '都道府県' %>
-      <%= f.collection_select(:prefecture_id_eq, Prefecture.all, :id, :name, {include_blank: '指定なし'}, {class:'button is-rounded m-2'}) %>
+      <%= f.collection_select(:prefecture_id_eq, Prefecture.all, :id, :name, {}, {class:'button is-rounded m-2'}) %>
     </div>
     <%= f.submit '検索', class:'button is-link is-focused ml-6' %>
   <% end %>
