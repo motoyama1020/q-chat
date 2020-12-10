@@ -16,11 +16,6 @@
       <%= f.label :prefecture_id_eq, '都道府県' %>
       <%= f.collection_select(:prefecture_id_eq, Prefecture.all.where.not(name: '--'), :id, :name, {include_blank: '指定なし'}, {class:'button is-rounded m-2'}) %>
     </div>
-    <div class="m-2">
-      <label>
-        <%= image_tag "虫眼鏡のアイコン.png", class: 'button is-info is-focused ml-6'%>
-        <%= f.submit class:'is-hidden' %>
-      </label>
-    </div>
+    <%= f.submit '検索', class:'button is-link is-focused ml-6' %>
   <% end %>
 </div>
