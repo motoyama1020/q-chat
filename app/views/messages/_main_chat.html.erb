@@ -15,7 +15,7 @@
     
     <div class="navbar-end navbar-item">
       <%= link_to (image_tag "家のアイコン素材.png"), rooms_path(current_user), class: 'button is-success is-light ml-2'%>
-      <%= link_to (image_tag "バックスペースの削除アイコン.png"), room_path(@room), class:'button is-danger  is-light is-focused ml-2', method: :delete %>
+      <%= link_to (image_tag "バックスペースの削除アイコン.png"), room_path(@room), class:'button is-danger  is-light is-focused ml-2', method: :delete %>
     </div>
   </nav>
 
@@ -29,7 +29,7 @@
       <%= f.text_field :content, class: 'input is-medium is-primary is-rounded pr-6', type:"text", placeholder: 'type a message' %>
       <div class="image">
         <label>
-          <%= image_tag "枠つきの羽根ペンのアイコン素材.png", class:'button is-success ml-1' %>
+          <%= image_tag "枠つきの羽根ペンのアイコン素材.png", class:'button is-success ml-1' %>
           <%= f.submit class:'is-hidden' %>
         </label>
       </div>
