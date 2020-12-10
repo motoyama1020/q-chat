@@ -15,9 +15,9 @@
     
     <div class="navbar-end navbar-item">
       <%= link_to (image_tag "家のアイコン素材.png"), rooms_path(current_user), class: 'button is-success is-light ml-2'%>
-      <% if @room.users.ids == current_user.id %>
+      
       <%= link_to (image_tag "バックスペースの削除アイコン.png"), room_path(@room), class:'button is-danger is-light is-focused ml-2', data: { confirm: 'このルームが削除され、閲覧できなくなりますが、よろしいですか?' }, method: :delete %>
-      <% end %>
+      
     </div>
   </nav>
 
