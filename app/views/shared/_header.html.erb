@@ -1,10 +1,10 @@
 <nav class="navbar is-info" role="navigation" aria-label="dropdown navigation">
   <div class="navbar-start navbar-item is-size-4">
-    <%= link_to "Qchat", root_path, class:" button is-info"%> 
+    <%= link_to "Qchat", root_path, class:"has-text-white"%> 
   </div>
   <div class="navbar-end navbar-item has-text-white">
     <% if user_signed_in? %>
-      <%= link_to "!!#{current_user.name}でログイン中!!", new_user_session_path, class:'button is-info m-2' %>
+      <%= link_to "!!#{current_user.name}でログイン中!!", new_user_session_path, class:'has-text-white' %>
     <% end %>
   </div>
 </nav>
