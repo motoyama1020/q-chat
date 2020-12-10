@@ -18,7 +18,46 @@
           <%= f.file_field :image, class: 'has-text-danger mt-1 ml-1'%>
           </p>
         </div>
-        <%= render partial: 'shared/form', locals: { f: f }%>
+        <div class="field">
+          <%= f.label :name%>
+          <p class="control has-icons-left has-icons-right">
+            <%= f.text_field :name, autofocus: true, class:"input is-primary", type:"name", placeholder:"Name"%>
+            <span class="icon is-small is-left">
+              <i class="fas fa-check-square"></i>
+            </span>
+          </p>
+        </div>
+        <div class="field">
+          <%= f.label :email%>
+          <p class="control has-icons-left has-icons-right">
+            <%= f.email_field :email, autofocus: true, class:"input is-primary", type:"email", placeholder:"Email"%>
+            <span class="icon is-small is-left">
+              <i class="fas fa-envelope"></i>
+            </span>
+            <span class="icon is-small is-right">
+              <i class="fas fa-check"></i>
+            </span>
+          </p>
+        </div>
+        <div class="field">
+          <%= f.label :password %>
+          <i>(英数字6文字以上)</i>
+          <p class="control has-icons-left">
+            <%= f.password_field :password, autocomplete: "off", class:"input is-primary", type:"password", placeholder:"Password"%>
+            <span class="icon is-small is-left">
+              <i class="fas fa-lock"></i>
+            </span>
+          </p>
+        </div>
+        <div class="field">
+          <%= f.label :password_confirmation %>
+          <p class="control has-icons-left">
+            <%= f.password_field :password_confirmation, autocomplete: "off", class:"input is-primary", type:"password", placeholder:"Password"%>
+            <span class="icon is-small is-left">
+              <i class="fas fa-lock"></i>
+            </span>
+          </p>
+        </div>
         <div class="is-flex is-justify-content-left">
           <div class="field ">
             <%= f.label :イベント参加回数 %>
