@@ -3,7 +3,6 @@ class UsersController < ApplicationController
 
   def edit
     @message = Message.new
-    @user = User.find(params[:id])
   end
 
   def update
@@ -21,6 +20,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:clear_time, :event_time, :name, :email, :image, :password, :password_confirmation)
+    params.require(:user).permit(:clear_time, :event_time, :name, :email, :image)
   end
 end
