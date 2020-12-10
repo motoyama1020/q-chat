@@ -26,7 +26,7 @@ class User < ApplicationRecord
   def self.guest
     find_or_create_by!(email: 'guest@example.com') do |user|
       user.name = "ゲストユーザー"
-      user.password = SecureRandom.urlsafe_base64
+      user.password = Faker::Lorem.characters(min_alpha: 1, min_numeric: 1, number: 8)
     end
   end
 end
