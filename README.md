@@ -27,6 +27,7 @@
 
 ## URL
 アプリケーション
+- http://54.248.149.121/
 - https://q-chat31740.herokuapp.com/
 
 要件定義 
