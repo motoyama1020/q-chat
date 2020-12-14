@@ -22,26 +22,26 @@
             </div>
           </div>
           <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
-          <div class="is-flex is-justify-content-space-between mt-4">
-            <div class="weight-bold-text">
+          <div class="is-flex-desktop  mt-4">
+            <div class="m-3">
               期間(西暦)
               <span class="has-text-danger">必須</span>
-              <%= f.collection_select(:year_id, Year.all, :id, :name, {}, {class:"button is-rounded"}) %>
+              <%= f.collection_select(:year_id, Year.all, :id, :name, {}, {class:"button is-rounded is-block"}) %>
             </div>
-            <div class="weight-bold-text">
+            <div class="m-3">
               期間(月)
               <span class="has-text-danger">必須</span>
-              <%= f.collection_select(:month_id, Month.all, :id, :name, {}, {class:"button is-rounded"}) %>
+              <%= f.collection_select(:month_id, Month.all, :id, :name, {}, {class:"button is-rounded is-block"}) %>
             </div>
-            <div class="weight-bold-text">
+            <div class="m-3">
               都道府県
               <span class="has-text-danger">必須</span>
-              <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"button is-rounded"}) %>
+              <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"button is-rounded is-block"}) %>
             </div>
-            <div class="weight-bold-text">
+            <div class="m-3">
               定員
               <span class="has-text-danger">必須</span>
-              <%= f.collection_select(:capacity_id, Capacity.all, :id, :name, {}, {class:"button is-rounded"}) %>
+              <%= f.collection_select(:capacity_id, Capacity.all, :id, :name, {}, {class:"button is-rounded is-block"}) %>
             </div>
           </div>
           <div class="m-4">
