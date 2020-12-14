@@ -68,7 +68,7 @@
 
 ## 工夫したポイント
 - 採用担当者様が簡単にアプリにログインできるように、ゲストログイン機能を実装いたしました。
-[![Image from Gyazo](https://i.gyazo.com/f65f713a582915df02643e4189bc630b.png)](https://gyazo.com/f65f713a582915df02643e4189bc630b)
+[![Image from Gyazo](https://i.gyazo.com/45ca3d62e00484097cdf70f8b4f47e2f.png)](https://gyazo.com/45ca3d62e00484097cdf70f8b4f47e2f)
 
 - バックスペースボタンはルーム削除機能なので、ルーム作成者にしか表示されないようにし、ボタンを押した後に確認ホップアップが出現するようにしました。  
 [![Image from Gyazo](https://i.gyazo.com/7e7035b410cebf1c2890315d769c2f24.png)](https://gyazo.com/7e7035b410cebf1c2890315d769c2f24)  
