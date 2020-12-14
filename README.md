@@ -1,3 +1,5 @@
+# Qchat
+
 # 概要
 
 ## どんなアプリか
@@ -65,6 +67,13 @@
 →イベント参加回数、クリア回数、他己評価
 
 ## 工夫したポイント
+- 採用担当者様が簡単にアプリにログインできるように、ゲストログイン機能を実装いたしました。
+[![Image from Gyazo](https://i.gyazo.com/f65f713a582915df02643e4189bc630b.png)](https://gyazo.com/f65f713a582915df02643e4189bc630b)
+
+- バックスペースボタンはルーム削除機能なので、ルーム作成者にしか表示されないようにし、ボタンを押した後に確認ホップアップが出現するようにしました。
+[![Image from Gyazo](https://i.gyazo.com/ea4b27acda33239ffba88e511fbfc43d.png)](https://gyazo.com/ea4b27acda33239ffba88e511fbfc43d)
+[![Image from Gyazo](https://i.gyazo.com/5b6b34b078eef3c306efb47ac4e4849f.png)](https://gyazo.com/5b6b34b078eef3c306efb47ac4e4849f)
+
 - 誰が投稿したのか一目でわかるように、メッセージに人物アイコンを紐付けました。
 [![Image from Gyazo](https://i.gyazo.com/de41175799b5deac9d20d2fa14bd45f4.png)](https://gyazo.com/de41175799b5deac9d20d2fa14bd45f4)
 
