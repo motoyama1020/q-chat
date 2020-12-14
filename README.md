@@ -71,7 +71,7 @@
 [![Image from Gyazo](https://i.gyazo.com/f65f713a582915df02643e4189bc630b.png)](https://gyazo.com/f65f713a582915df02643e4189bc630b)
 
 - バックスペースボタンはルーム削除機能なので、ルーム作成者にしか表示されないようにし、ボタンを押した後に確認ホップアップが出現するようにしました。  
-[![Image from Gyazo](https://i.gyazo.com/ea4b27acda33239ffba88e511fbfc43d.png)](https://gyazo.com/ea4b27acda33239ffba88e511fbfc43d)
+[![Image from Gyazo](https://i.gyazo.com/ea4b27acda33239ffba88e511fbfc43d.png)](https://gyazo.com/ea4b27acda33239ffba88e511fbfc43d)  
 [![Image from Gyazo](https://i.gyazo.com/5b6b34b078eef3c306efb47ac4e4849f.png)](https://gyazo.com/5b6b34b078eef3c306efb47ac4e4849f)
 
 
